@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Toxin</title>
+		<!--link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet"-->
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body><div class="body-container">
+		<header class="header">
+			<div class="header-container">
+				<div class="header_logo">
+					<a href="#">
+						<img src="img/logo_Toxin.png" alt="logo">
+					</a>
+				</div>
+				<nav class="header_menu">
+					<ul class="header_list">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#mainform">Services</a></li>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Documentation</a></li>
+						<li><div class="header_list_Login"><a href="#">Login</a></div></li>
+						<li><div class="header_list_Register"><a href="#">Register</a></div></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="main-container"><main>
+			<div class="main-container_main-form">
+				<form class="mainForm">
+					<div>
+						<h1 style="font-fmily: Quicksand">We'll find a numbers for your desires</h1>
+					</div>
+					<div class="divInlineBlock">
+						<div>
+							<h3>Arrival</h3>
+							<input class="mainForm__arrivalField mF_textFild" type="text" name="arrival" placeholder="dd.mm.yyyy" style="width: 152px; background-position: 120px 20px;">
+						</div>
+						<div style="padding: 0 0 0 11px;">
+							<h3>Departure</h3>
+							<input class="mainForm__departureField mF_textFild" type="text" name="departure" placeholder="dd.mm.yyyy" style="width: 152px;  background-position: 120px 20px;">
+						</div>
+					</div>
+					<div>
+						<h3>Guests</h3>
+						<input class="mainForm__guestsField mF_textFild" type="text" name="guests" placeholder="How many gests" style="width: 320px;  background-position: 286px 20px;">
+					</div>
+					<div>
+						<div class="mainForm_SelectNumber">
+							<a href="#">Select Number</a>
+						</div>
+					</div>
+				</form>
+				<form class="modalFormGuests">
+					<div><h3>Adult</h3>
+						<div class="modalFormGuests_BtnGrp">
+							<button class="RoundButton modalFormGuests_Adults_M-Btn">-</button>
+							<p class="modalFormGuests_Adults">0</p>
+							<button class="RoundButton modalFormGuests_Adults_P-Btn">+</button>
+						</div>
+					</div>
+					<div><h3>Children</h3>
+						<div class="modalFormGuests_BtnGrp">
+							<button class="RoundButton modalFormGuests_Children_M-Btn">-</button>
+							<p class="modalFormGuests_Children">0</p>
+							<button class="RoundButton modalFormGuests_Children_P-Btn">+</button>
+						</div>
+					</div>
+					<div><h3>Babies in arms</h3>
+						<div class="modalFormGuests_BtnGrp">
+							<button class="RoundButton modalFormGuests_BabiesInArms_M-Btn">-</button>
+							<p class="modalFormGuests_BabiesInArms">0</p>
+							<button class="RoundButton modalFormGuests_BabiesInArms_P-Btn">+</button>
+						</div>
+					</div>
+					<div>
+						<button class="modalFormGuests_Clean">Clean</button>
+						<button class="modalFormGuests_Apply">Apply</button>
+					</div>
+				</form>
+			</div>
+		</main></div>
+		<div class="footer-container">
+			<footer>
+				<div class="footer-container__body">
+					<div class="footer-container__body_logo">
+						<a href="#">
+							<img src="img/logo_Toxin.png" alt="logo">
+						</a>
+						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam</p>
+					</div>
+					<div class="footer-container__body_nav">
+						<h3>Navigation</h3>
+						<ul>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">News</a></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Products</a></li>
+						</ul>
+					</div>
+					<div class="footer-container__body_nav">
+						<h3>About Us</h3>
+						<ul>
+							<li><a href="#">Who we are</a></li>
+							<li><a href="#">Our team</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Investors</a></li>
+						</ul>
+					</div>
+					<div class="footer-container__body_nav">
+						<h3>Support</h3>
+						<ul>
+							<li><a href="#">Documentation</a></li>
+							<li><a href="#">Community</a></li>
+							<li><a href="#">Get in Touch</a></li>
+							<li class="footer-container__body_engLocLink currentLanguageHide">
+								<a href="#" >
+									<img class="flag_UK" src="img/flag_eng.PNG" alt="localize in english">
+									English
+								</a>
+							</li>
+							<li class="footer-container__body_rusLocLink">
+								<a href="#">
+									<img class="flag_russia" src="img/flag_rus.PNG" alt="localize in russian">
+									Русский
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-container__body_subscription">
+						<h3>Subscribe to our newsletter</h3>
+						<p>Receive our latest news and promotions in your inbox!</p>
+						<div class="footer-container__body_subEmail">
+							<input class="footer-container__body_sbscrField" type="text" name="user-email">
+							<img class="footer-container__body_sbArrow" src="img/arrow2right.PNG" alt="subscribe">
+						</div>
+					</div>
+				
+				</div>
+				<div class="footer-container__bottom">
+					<div class="footer-container__bottom_rights">
+						<a href="#">Copyright &copy; 2018 Toxin Hotel. All rights reserved.</a>
+					</div>
+					<div class="footer-container__bottom_socials">
+						<ul class="footer-container__bottom_socials_list">
+							<li><a href="#"><img src="img/logo_twitter.png" alt="twitter"></a></li>
+							<li><a href="#"><img src="img/logo_facebook.png" alt="facebook"></a></li>
+							<li><a href="#"><img src="img/logo_instagramm.png" alt="instagramm"></a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>				
+	</div>
+	<script src="js/index.js"></script>
+	<script src="js/localize.js"></script>
+	</body>
+</html>
