@@ -7,14 +7,21 @@ rusLoc.addEventListener(
 	function(evt){
 		evt.preventDefault();
 		// 1. Change the texts links
-				console.log(document.body.childNodes.length);
-		let a = document.querySelectorAll('a');
-		for (let i=0; i < a.length; i++){
-			let elem = a[i];
-			console.log(elem.textContent);
-			//if(document.body.childNodes[i].nodeType==1){
-			//	console.log('document.body.childNodes[i].nodeType=1');
-			//}
+		let tE = document.querySelectorAll('*');
+		for (let i=0; i < tE.length; i++){
+			if (tE[i].hasAttribute("data-loc")){
+				tE[i].textContent=RussianDictionary[tE[i].getAttribute("data-loc")];
+			}
+			if (tE[i].hasAttribute("data-locImg")){
+				for (let x in tE[i].parentNode.style){
+					console.log(x);
+				}
+				tE[i].parentNode.classList.add(ImageRussianDictionary[tE[i].getAttribute("data-locImg")]);
+				tE[i].parentNode.classList.add(ImageRussianDictionary[tE[i].getAttribute("data-locImg")]+":hover");
+				//tE[i].parentNode.style="background-image: url(./img/"+ImageRussianDictionary[tE[i].getAttribute("data-locImg")]+".png";
+				//tE[i].style=ImageRussianDictionary[tE[i].getAttribute("data-locImg")]+"_hover.png";
+				console.log(tE[i].textContent);
+			}
 		}
 		// 2. Change the localize links
 		// 3. Change the localizing links

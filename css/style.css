@@ -154,10 +154,19 @@ input[type="text"]:focus{
 	background-repeat: no-repeat;
 	background-clip: border-box;
 }	
+.header_list_Login_Rus{
+	background-image: url(../img/Bg_btn_Login_rus.png);
+	background-size: 87px 34px;
+}
 
 .header_list_Login:hover{
 	background-image: url(../img/Bg_btn_Login_eng_hover.png);
 	background-size: 79px 34px;
+}
+
+.header_list_Login_Rus:hover{
+	background-image: url(../img/Bg_btn_Login_rus_hover.png);
+	background-size: 87px 34px;	
 }
 
 .header_list_Login a{
@@ -179,10 +188,17 @@ input[type="text"]:focus{
 	background-repeat: no-repeat;
 	background-clip: border-box;
 }	
-
+.header_list_Register_Rus{
+	background-image: url(../img/Bg_btn_Register_rus.png);
+	background-size: 196px 34px;	
+}
 .header_list_Register:hover{
 	background-image: url(../img/Bg_btn_Register_eng_hover.png);
 	background-size: 101px 34px;
+}
+.header_list_Register_Rus:hover{
+	background-image: url(../img/Bg_btn_Register_rus_hover.png);	
+	background-size: 196px 34px;	
 }
 
 .header_list_Register a{
@@ -245,7 +261,7 @@ input[type="text"]:focus{
 
 .mainForm_SelectNumber a{
 	color: white;
-	padding: 15px 103px 15px 103px;
+	padding: 15px 0px 15px 0px;
 }	
 
 .mainForm_SelectNumber a:hover{
