@@ -24,13 +24,13 @@
 						<li><a href="#" data-loc="Careers">Careers</a></li>
 						<li><a href="#" data-loc="News">News</a></li>
 						<li><a href="#" data-loc="Doc">Documentation</a></li>
-						<li><div class="header_list_Login"><a href="#" data-loc="Login" data-locImg="Login">Login</a></div></li>
-						<li><div class="header_list_Register"><a href="#" data-loc="Register" data-locImg="Register">Register</a></div></li>
+						<li><div class="header_list_Login"><a href="#" data-loc="Login" data-loc-img="Login">Login</a></div></li>
+						<li><div class="header_list_Register"><a href="#" data-loc="Register" data-loc-img="Register">Register</a></div></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<div class="main-container"><main>
+		<div class="main-container-out"><main class="main">
 			<div class="main-container_main-form">
 				<form class="mainForm">
 					<div>
@@ -39,16 +39,16 @@
 					<div class="divInlineBlock">
 						<div>
 							<h3 data-loc="Arrival">Arrival</h3>
-							<input class="mainForm__arrivalField mF_textFild" type="text" name="arrival" placeholder="dd.mm.yyyy" style="width: 152px; background-position: 120px 20px;">
+							<input class="mainForm__arrivalField mF_textFild" type="text" name="arrival" placeholder="dd.mm.yyyy" data-loc-ph="dmy" style="width: 152px; background-position: 120px 20px;">
 						</div>
 						<div style="padding: 0 0 0 11px;">
 							<h3 data-loc="Departure">Departure</h3>
-							<input class="mainForm__departureField mF_textFild" type="text" name="departure" placeholder="dd.mm.yyyy" style="width: 152px;  background-position: 120px 20px;">
+							<input class="mainForm__departureField mF_textFild" type="text" name="departure" placeholder="dd.mm.yyyy" data-loc-ph="dmy" style="width: 152px;  background-position: 120px 20px;">
 						</div>
 					</div>
 					<div>
 						<h3 data-loc="Guests">Guests</h3>
-						<input class="mainForm__guestsField mF_textFild" type="text" name="guests" placeholder="How many gests" style="width: 320px;  background-position: 286px 20px;">
+						<input class="mainForm__guestsField mF_textFild" type="text" name="guests" placeholder="How many gests" data-loc-ph="HowManyGests" style="width: 320px;  background-position: 286px 20px;">
 					</div>
 					<div>
 						<div class="mainForm_SelectNumber">
@@ -84,6 +84,9 @@
 					</div>
 				</form>
 			</div>
+			<div class="main-container-in" >
+				<div class="main-container-in__Signature" data-loc="Text01">The best numbers for your work,<br> rest and just inspiration</div>
+			</div>
 		</main></div>
 		<div class="footer-container">
 			<footer>
@@ -92,7 +95,7 @@
 						<a href="#">
 							<img src="img/logo_Toxin.png" alt="logo">
 						</a>
-						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam</p>
+						<p data-loc="Text02">Seat reservation in the best hotel 2019 by version «Hotel's review» association</p>
 					</div>
 					<div class="footer-container__body_nav">
 						<h3>Navigation</h3>
@@ -136,7 +139,7 @@
 						<h3 data-loc="Subscription">Subscribe to our newsletter</h3>
 						<p data-loc="Text03">Receive our latest news and promotions in your inbox!</p>
 						<div class="footer-container__body_subEmail">
-							<input class="footer-container__body_sbscrField" type="text" name="user-email">
+							<input class="footer-container__body_sbscrField" type="text" name="user-email" placeholder="Email" data-loc-ph="EMail">
 							<img class="footer-container__body_sbArrow" src="img/arrow2right.PNG" alt="subscribe">
 						</div>
 					</div>
@@ -159,6 +162,7 @@
 	</div>
 	<script src="js/index.js"></script>
 	<script src="js/locDicRus.js"></script>
+	<script src="js/locDicEng.js"></script>
 	<script src="js/localize.js"></script>
 	</body>
 </html>

@@ -8,7 +8,7 @@ const RussianDictionary={
 	Doc: "Соглашения",
 	Login: "Войти",
 	Register: "Зарегистрироваться",
-	Text01: "Лучшие номера для вашей работы, отдыха и просто вдохновения",
+	Text01: "Лучшие номера для вашей работы,<br> отдыха и просто вдохновения",
 	Text02: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
 	Text03: "Получайте специальные предложения и новости сервиса",
 	Text04: "Найдем номера под ваши пожелания",
@@ -34,4 +34,9 @@ const RussianDictionary={
 const ImageRussianDictionary={
 	Login: "header_list_Login_Rus",
 	Register: "header_list_Register_Rus",
+}
+const PlaceholderRussianDictionary={
+	dmy:{Default: "дд.мм.гггг"},
+	HowManyGests:{Default: "Сколько гостей"},
+	EMail:{Default: "Электронный адрес"},
 }

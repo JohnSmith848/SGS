@@ -209,12 +209,14 @@ input[type="text"]:focus{
 	color: #bc9cff;
 }
 
-.main-container{
+.main-container-out{
 	/*max-width: 1440px;*/
 	height: 830px;
 	border: 1px solid #000;
 }
-
+.main{
+	height: 100%;
+}
 .main-container_main-form{
 	/*border: 1px solid #000;*/
 
@@ -252,21 +254,23 @@ input[type="text"]:focus{
 	background-position: 0 0px;
 	background-repeat: no-repeat;
 	background-clip: border-box;
+	color: white;
 }	
 
 .mainForm_SelectNumber:hover{
 	background-image: url(../img/Bg_btn_SelectNumber_hover.png);
+	color: #bc9cff;
 	/*background-size: 79px 34px;*/
 }
 
 .mainForm_SelectNumber a{
-	color: white;
+	color: inherit;
 	padding: 15px 0px 15px 0px;
 }	
 
-.mainForm_SelectNumber a:hover{
+/*.mainForm_SelectNumber a:hover{
 	color: #bc9cff;
-}
+}*/
 
 .modalFormGuests{
 	display: none;
@@ -370,6 +374,22 @@ button[class$="P-Btn"]:hover{
 .modal-show{
 	display: block;
 }
+.main-container-in{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	/*text-align: right;
+	vertical-align: bottom;*/
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.main-container-in__Signature{
+	padding: 0 140px 29px 0; 
+	color: rgba(31, 32, 65, 0.75);
+	line-height: 24px;
+	text-align: right;
+
+}
 
 .footer-container__body{
 	height: 373px;
@@ -444,7 +464,7 @@ button[class$="P-Btn"]:hover{
 }
 .footer-container__body_sbArrow{
 	position: relative;
-	top:0px;
+	top:-30px;
 	left:230px;
 }
 

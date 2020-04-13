@@ -10,21 +10,18 @@ rusLoc.addEventListener(
 		let tE = document.querySelectorAll('*');
 		for (let i=0; i < tE.length; i++){
 			if (tE[i].hasAttribute("data-loc")){
-				tE[i].textContent=RussianDictionary[tE[i].getAttribute("data-loc")];
-			}
-			if (tE[i].hasAttribute("data-locImg")){
-				for (let x in tE[i].parentNode.style){
-					console.log(x);
+				if (tE[i].getAttribute("data-loc").startsWith("Text")){
+					tE[i].innerHTML=RussianDictionary[tE[i].getAttribute("data-loc")];
+				}else{
+					tE[i].textContent=RussianDictionary[tE[i].getAttribute("data-loc")];
 				}
-				tE[i].parentNode.classList.add(ImageRussianDictionary[tE[i].getAttribute("data-locImg")]);
-				tE[i].parentNode.classList.add(ImageRussianDictionary[tE[i].getAttribute("data-locImg")]+":hover");
-				//tE[i].parentNode.style="background-image: url(./img/"+ImageRussianDictionary[tE[i].getAttribute("data-locImg")]+".png";
-				//tE[i].style=ImageRussianDictionary[tE[i].getAttribute("data-locImg")]+"_hover.png";
-				console.log(tE[i].textContent);
+			}
+			if (tE[i].hasAttribute("data-loc-img")){
+				tE[i].parentNode.classList.add(ImageRussianDictionary[tE[i].getAttribute("data-loc-img")]);
+				tE[i].parentNode.classList.add(ImageRussianDictionary[tE[i].getAttribute("data-loc-img")]+":hover");
 			}
 		}
-		// 2. Change the localize links
-		// 3. Change the localizing links
+		// 2. Change the localizing links
 		rusLoc.classList.add('currentLanguageHide')
 		curLoc.classList.remove('currentLanguageHide');
 		curLoc = document.querySelector('.currentLanguageHide'); 
@@ -35,9 +32,31 @@ engLoc.addEventListener(
 	'click',
 	function(evt){
 		evt.preventDefault();
-		// 3. Change the localize links
+		// 1. Change the texts links
+		let tE = document.querySelectorAll('*');
+		for (let i=0; i < tE.length; i++){
+			if (tE[i].hasAttribute("data-loc")){
+				if (tE[i].getAttribute("data-loc").startsWith("Text")){
+					tE[i].innerHTML=EnglishDictionary[tE[i].getAttribute("data-loc")];
+				}else{
+					tE[i].textContent=EnglishDictionary[tE[i].getAttribute("data-loc")];
+				}
+			}
+			if (tE[i].hasAttribute("data-loc-img")){
+				tE[i].parentNode.classList.remove(ImageEnglishDictionary[tE[i].getAttribute("data-loc-img")]);
+				tE[i].parentNode.classList.remove(ImageEnglishDictionary[tE[i].getAttribute("data-loc-img")]+":hover");
+			}
+			if (tE[i].hasAttribute("data-loc-ph")){
+				for (let x in tE[i].parentNode.style){
+				}
+				tE[i].parentNode.classList.remove(ImageEnglishDictionary[tE[i].getAttribute("data-loc-img")]);
+				tE[i].parentNode.classList.remove(ImageEnglishDictionary[tE[i].getAttribute("data-loc-img")]+":hover");
+			}
+		}
+		// 2. Change the localize links
 		engLoc.classList.add('currentLanguageHide')
 		curLoc.classList.remove('currentLanguageHide');
 		curLoc = document.querySelector('.currentLanguageHide'); 
 	}
 );
+
