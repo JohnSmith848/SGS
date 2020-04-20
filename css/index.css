@@ -1,0 +1,199 @@
+.body-container{
+	background-image: url(../img/Bg_Room_1ct.png);
+	background-size: 1440px 900px;
+	background-repeat: no-repeat;
+}
+
+.main-container-out{
+	/*max-width: 1440px;*/
+	height: 830px;
+	border: 1px solid #000;
+}
+.main{
+	height: 100%;
+	position: relative;
+}
+/*.main-container_main-form{
+	/*border: 1px solid #000;
+
+}*/
+
+.mainForm{
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 5px;
+	padding: 31px 29px;
+	background-color: #fff;
+	position: absolute;
+	left: 140px;
+	top: 70px;
+	width: 379px;
+	height: 375px;
+}
+.divInlineBlock div{
+	display: inline-block;
+}
+.mainForm h3{
+	padding: 5px 0 5px 0;	
+}
+.mainForm > div{
+	padding: 15px 0 0 0;	
+}
+/*in style.css
+.mainForm__SubmitBtn{
+	height: 45px;
+	font-weight: bold;  
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 10px; 
+	background-image: url(../img/Bg_btn_SelectNumber.png);
+	background-size: 100% 45px;
+	background-position: 0;
+	background-repeat: no-repeat;
+	background-clip: border-box;
+	color: white;
+}	
+
+.mainForm__SubmitBtn:hover{
+	background-image: url(../img/Bg_btn_SelectNumber_hover.png);
+	color: #bc9cff;
+}
+
+.mainForm__SubmitBtn a{
+	color: inherit;
+	padding: 15px 0px 15px 0px;
+}	*/
+
+.modalFormDate{
+	display: none;
+	left: 170px;
+	top: 260px;
+	width: 320px;
+	height: 369px;
+	/*background-image: url(../img/GuestsDrDnFrBg.svg);*/
+	position: absolute;
+	padding: 31px 31px;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+}
+
+.modalFormGuests{
+	display: none;
+	left: 150px;
+	top: 322px;
+	width: 360px;
+	height: 199px;	
+	background-image: url(../img/GuestsDrDnFrBg.svg);
+	position: absolute;
+	padding: 31px 31px;
+	/*background-color: #fff;*/
+}
+
+.modalFormGuests > div{
+	padding: 3px 0 3px 3px;
+	height: 35px;
+	display: flex;
+	justify-content: space-between; 
+}
+
+.modalFormGuests > div:last-child{
+	padding: 9px 0 1px 3px;
+}
+
+.modalFormGuests h3{
+	padding: 6px 0;
+}
+
+.modalFormGuests_BtnGrp{
+	width:90px;
+	/*float: right;*/
+	display: flex;
+	justify-content: space-between; 
+}
+/*.modalFormGuests_BtnGrp > *{
+	display: inline;
+}*/
+
+.modalFormGuests_BtnGrp p{
+	margin: 0;
+	padding: 6px 10px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+
+.modalFormGuests button{
+	outline-width: 0;
+}
+/*in style.css
+.RoundButton {
+	border-radius: 15px;
+	border: 1px solid rgba(31, 32, 65, 0.05);
+	background-color: #fff;
+	padding: 3px 11px 4px 9px;
+	width: 30px;
+	height: 30px;
+	font-size: 18px;
+	line-height: 22px;
+	color: rgba(31, 32, 65, 0.25);
+}*/
+
+button[class$="P-Btn"]{
+	border-color: rgba(31, 32, 65, 0.25);
+	/*color: rgba(31, 32, 65, 0.25);*/
+}
+
+button[class$="P-Btn"]:hover{
+	border-color: rgba(31, 32, 65, 0.5);
+	color: rgba(31, 32, 65, 0.5);
+}
+
+.M-Btn-active{
+	border-color: rgba(31, 32, 65, 0.25);
+}
+
+.M-Btn-active:hover{
+	border-color: rgba(31, 32, 65, 0.5);
+	color: rgba(31, 32, 65, 0.5);
+}
+
+.modalFormGuests_Clean,
+.modalFormGuests_Apply{
+	border: none;
+	background-color: #fff;
+	padding: 0;
+	color: rgba(31, 32, 65, 0.5);
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 15px;
+	text-transform: uppercase;
+
+}
+
+.modalFormGuests_Clean:hover,
+.modalFormGuests_Apply:hover{
+	color: #bc9cff;
+}
+
+.modal-show{
+	display: block;
+}
+.main-container-in{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	/*text-align: right;
+	vertical-align: bottom;*/
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.main-container-in__Signature{
+	padding: 0 140px 29px 0; 
+	color: rgba(31, 32, 65, 0.75);
+	line-height: 24px;
+	text-align: right;
+
+}
+

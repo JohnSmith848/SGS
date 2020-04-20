@@ -6,17 +6,20 @@ body{
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 17px;
-	font-size: 14px;
-	line-height: 17px;
-
-	background-image: url(../img/Bg_Room_1ct.png);
-	background-size: 1440px 900px;
-	/*background-position: -50px 0;*/
-	background-repeat: no-repeat;
 }
 img{
 	padding: 0;
 	margin: 0;
+}
+form{
+	color: rgba(31, 32, 65, 0.5);
+}
+
+form>*{
+	color: inherit;
+	font: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 a{
 	text-decoration: none;
@@ -48,27 +51,8 @@ li{
 	margin: 0;
 	padding: 0;
 }
-
 /*
-input[type="text"]{
-	height:45px;
-	border: 1px solid rgba(31, 32, 65, 0.25);
-	border-radius: 5px;
-	color: rgba(31, 32, 65, 0.25);
-	padding:0 37px 4px 13px;
-	background-image: url(../img/bracketDown.png);
-	background-repeat: no-repeat;
-}
-input[type="text"]:hover{
-	border: 1px solid rgba(31, 32, 65, 0.5);
-	color: rgba(31, 32, 65, 0.5);
-}
-input[type="text"]:focus{
-	border: 1px solid rgba(31, 32, 65, 0.5);
-	color: rgba(31, 32, 65, 0.5);
-	outline: 0px
-}*/
-.mF_textFild{
+.mF_textField{
 	height:45px;
 	border: 1px solid rgba(31, 32, 65, 0.25);
 	border-radius: 5px;
@@ -79,20 +63,20 @@ input[type="text"]:focus{
 	outline: 0px
 }
 
-.mF_textFild:hover{
+.mF_textField:hover{
 	border: 1px solid rgba(31, 32, 65, 0.5);
 	color: rgba(31, 32, 65, 0.5);
 }
 
-.mF_textFild-active{
+.mF_textField-active{
 	border: 1px solid rgba(31, 32, 65, 0.5);
 	color: rgba(31, 32, 65, 0.5);
 }
+*/
 
 .body-container{
-	/*width: 1440px;*/
 	width: 1440px;
-
+	margin: 0 auto;
 }
 
 .header{
@@ -111,27 +95,27 @@ input[type="text"]:focus{
 	/*Not to stick the container to the device sides that width less then 1440px*/
 	padding: 0 15px; 
 }
-.header_logo{
+.header__logo{
 	float: left;
 	padding: 12px 0 12px 125px;/*left=140-15*/
 }
 
-.header_menu{
+.header__menu{
 	/*display: inline;	
 	padding-right: 125px;/*140-15*/
 }
-.header_list{
+.header__list{
 	float: right;
 	padding: 15px 125px 15px 0;/*right=140-15*/
 }
 
-.header_list li{
+.header__list li{
 	display: inline-block;
 }
-.header_list a{
+.header__list a{
 	padding: 10px 15px 10px 15px;
 }
-.header_list a:hover{
+.header__list a:hover{
 	/* Dark 75% */
 	color: rgba(31, 32, 65, 0.75);
 	font-weight: bold;  
@@ -143,7 +127,83 @@ input[type="text"]:focus{
 	*/
 }
 
-.header_list_Login{
+
+/*common style form controls*/
+/*1. any text fields styles*/
+.text-field,
+.subscription-text-field,
+.dropdown-text-field{
+	height:45px;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	border-radius: 5px;
+	color: rgba(31, 32, 65, 0.25);
+	padding: 13px;
+	outline: 0px
+}
+
+.text-field:hover,
+.subscription-text-field:hover,
+.dropdown-text-field:hover{
+	border: 1px solid rgba(31, 32, 65, 0.5);
+	color: rgba(31, 32, 65, 0.5);
+}
+
+.text-field-active{
+	border: 1px solid rgba(31, 32, 65, 0.5);
+	color: rgba(31, 32, 65, 0.5);
+}
+
+.subscription-text-field,
+.dropdown-text-field{
+	padding:13 37px 13px 13px;
+}
+
+.subscription-text-field{
+	background-image: url(../img/bracketDown.png);
+	background-repeat: no-repeat;
+}
+/*2. any buttons styles*/
+
+.SubmitButton{
+	height: 45px;
+	font-weight: bold;  
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 10px; /*1px 5px 1px 5px;*/
+	background-image: url(../img/Bg_btn_SelectNumber.png);
+	background-size: 100% 45px;
+	background-position: 0 0px;
+	background-repeat: no-repeat;
+	background-clip: border-box;
+	color: white;
+}	
+
+.SubmitButton:hover{
+	background-image: url(../img/Bg_btn_SelectNumber_hover.png);
+	color: #bc9cff;
+	/*background-size: 79px 34px;*/
+}
+
+.SubmitButton a{
+	color: inherit;
+	padding: 15px 0px 15px 0px;
+}
+
+.RoundButton {
+	border-radius: 15px;
+	border: 1px solid rgba(31, 32, 65, 0.05);
+	background-color: #fff;
+	padding: 3px 11px 4px 9px;
+	width: 30px;
+	height: 30px;
+	font-size: 18px;
+	line-height: 22px;
+	color: rgba(31, 32, 65, 0.25);
+}
+
+.LoginButton{
+	height: 45px;
 	font-weight: bold;  
 	font-size: 12px;
 	text-transform: uppercase;
@@ -154,30 +214,31 @@ input[type="text"]:focus{
 	background-repeat: no-repeat;
 	background-clip: border-box;
 }	
-.header_list_Login_Rus{
+.LoginButton_Rus{
 	background-image: url(../img/Bg_btn_Login_rus.png);
 	background-size: 87px 34px;
 }
 
-.header_list_Login:hover{
+.LoginButton:hover{
 	background-image: url(../img/Bg_btn_Login_eng_hover.png);
 	background-size: 79px 34px;
 }
 
-.header_list_Login_Rus:hover{
+.LoginButton_Rus:hover{
 	background-image: url(../img/Bg_btn_Login_rus_hover.png);
 	background-size: 87px 34px;	
 }
 
-.header_list_Login a{
+.LoginButton a{
+	padding: 10px 15px 10px 15px;
 	color: white;
 }	
 
-.header_list_Login a:hover{
+.LoginButton a:hover{
 	color: #bc9cff;
 }
 
-.header_list_Register{
+.RegisterButton{
 	font-weight: bold;  
 	font-size: 12px;
 	text-transform: uppercase;
@@ -188,89 +249,158 @@ input[type="text"]:focus{
 	background-repeat: no-repeat;
 	background-clip: border-box;
 }	
-.header_list_Register_Rus{
+.RegisterButton_Rus{
 	background-image: url(../img/Bg_btn_Register_rus.png);
 	background-size: 196px 34px;	
 }
-.header_list_Register:hover{
+.RegisterButton:hover{
 	background-image: url(../img/Bg_btn_Register_eng_hover.png);
 	background-size: 101px 34px;
 }
-.header_list_Register_Rus:hover{
+.RegisterButton_Rus:hover{
 	background-image: url(../img/Bg_btn_Register_rus_hover.png);	
 	background-size: 196px 34px;	
 }
 
-.header_list_Register a{
+.RegisterButton a{
 	color: white;
 }	
 
-.header_list_Register a:hover{
+.RegisterButton a:hover{
 	color: #bc9cff;
 }
 
-.main-container-out{
-	/*max-width: 1440px;*/
-	height: 830px;
-	border: 1px solid #000;
-}
-.main{
-	height: 100%;
-}
-.main-container_main-form{
-	/*border: 1px solid #000;*/
+/*3. any radio buttons styles*/
 
+.radio-btn{
+  position: relative;
+  min-height: 30px;
+  padding-left: 30px;
+  padding-right: 15px;
+  cursor: pointer;
+  display: inline-block;
+}
+.radio-btn__check-box{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  outline: none;
+}
+.radio-btn__label{
+  cursor: pointer;
+}
+.radio-btn__render{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: solid 1px #bc9cff;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.radio-btn__check-box:disabled + .radio-btn__label > .radio-btn__render {
+  border-color: rgba(31, 32, 65, 0.25);
+}
+.radio-btn__check-box:focus + .radio-btn__label > .radio-btn__render {
+  outline: none;
+  box-shadow: 0 0 1px 2px white, 0 0 3px 3px rgba(0, 0, 255, 0.15);
+}
+.radio-btn__check-box:active + .radio-btn__label > .radio-btn__render {
+  outline: none;
+  box-shadow: 0 0 1px 2px white, 0 0 3px 3px rgba(255, 0, 0, 0.3);
+}
+.radio-btn__check-box:checked + .radio-btn__label > .radio-btn__render::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.radio-btn__check-box:checked + .radio-btn__label {
+  color: rgba(31, 32, 65, 0.75);
 }
 
-.mainForm{
-	border: 1px solid rgba(0, 0, 0, 0.12);
-	border-radius: 5px;
-	padding: 31px 29px;
-	background-color: #fff;
-	position: fixed;
-	left: 140px;
-	top: 140px;
-	width: 379px;
-	height: 375px;
-}
-.divInlineBlock div{
-	display: inline-block;
-}
-.mainForm h3{
-	padding: 5px 0 5px 0;	
-}
-.mainForm > div{
-	padding: 15px 0 0 0;	
-}
-.mainForm_SelectNumber{
-	height: 45px;
-	font-weight: bold;  
-	font-size: 12px;
-	text-transform: uppercase;
-	text-align: center;
-	margin-top: 10px; /*1px 5px 1px 5px;*/
-	background-image: url(../img/Bg_btn_SelectNumber.png);
-	background-size: 315px 45px;
-	background-position: 0 0px;
-	background-repeat: no-repeat;
-	background-clip: border-box;
-	color: white;
-}	
+/*4. any toggles styles*/
 
-.mainForm_SelectNumber:hover{
-	background-image: url(../img/Bg_btn_SelectNumber_hover.png);
-	color: #bc9cff;
-	/*background-size: 79px 34px;*/
+.toggle-btn{
+  position: relative;
+  min-height: 30px;
+  padding-left: 50px;
 }
-
-.mainForm_SelectNumber a{
-	color: inherit;
-	padding: 15px 0px 15px 0px;
-}	
-
-/*.mainForm_SelectNumber a:hover{
-	color: #bc9cff;
+.toggle-btn__check-box{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  outline: none;
+}
+.toggle-btn__label{
+  cursor: pointer;		
+  color: rgba(31, 32, 65, 0.75);
+}
+.toggle-btn__render{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 20px;
+  border: solid 1px rgba(31, 32, 65, 0.25);
+  border-radius: 9px;
+  cursor: pointer;	
+}
+.toggle-btn__check-box:checked + .toggle-btn__label > .toggle-btn__render {
+  border-color: #bc9cff;
+}
+.toggle-btn__check-box + .toggle-btn__label > .toggle-btn__render::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  left: 9px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(31, 32, 65, 0.25);
+  transition: left 0.5s;
+}
+.toggle-btn__check-box:checked + .toggle-btn__label > .toggle-btn__render::before {
+  left: 29px; /*28*/
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+/*.btnToggleCkB:disabled + .btnToggleLbl > .btnToggleRender {
+  border-color: rgba(31, 32, 65, 0.25);
+  cursor: auto;
+}
+.btnToggleCkB:disabled + .btnToggleLbl {
+  cursor: auto;
 }*/
+.toggle-btn__check-box:focus + .toggle-btn__label > .toggle-btn__render {
+  outline: none;
+  box-shadow: 0 0 1px 2px white, 0 0 3px 3px rgba(0, 0, 255, 0.15);
+}
+.toggle-btn__check-box:active + .toggle-btn__label > .toggle-btn__render {
+  outline: none;
+  box-shadow: 0 0 1px 2px white, 0 0 3px 3px rgba(255, 0, 0, 0.3);
+}
+
+/*
+.modalFormDate{
+	display: none;
+	left: 170px;
+	top: 330px;
+	width: 320px;
+	height: 369px;
+	/*background-image: url(../img/GuestsDrDnFrBg.svg);*//*
+	position: fixed;
+	padding: 31px 31px;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+}
 
 .modalFormGuests{
 	display: none;
@@ -281,7 +411,7 @@ input[type="text"]:focus{
 	background-image: url(../img/GuestsDrDnFrBg.svg);
 	position: fixed;
 	padding: 31px 31px;
-	/*background-color: #fff;*/
+	/*background-color: #fff;*//*
 }
 
 .modalFormGuests > div{
@@ -301,13 +431,13 @@ input[type="text"]:focus{
 
 .modalFormGuests_BtnGrp{
 	width:90px;
-	/*float: right;*/
+	/*float: right;*//*
 	display: flex;
 	justify-content: space-between; 
 }
 /*.modalFormGuests_BtnGrp > *{
 	display: inline;
-}*/
+}*//*
 
 .modalFormGuests_BtnGrp p{
 	margin: 0;
@@ -322,21 +452,10 @@ input[type="text"]:focus{
 	outline-width: 0;
 }
 
-.RoundButton {
-	border-radius: 15px;
-	border: 1px solid rgba(31, 32, 65, 0.05);
-	background-color: #fff;
-	padding: 3px 11px 4px 9px;
-	width: 30px;
-	height: 30px;
-	font-size: 18px;
-	line-height: 22px;
-	color: rgba(31, 32, 65, 0.25);
-}
 
 button[class$="P-Btn"]{
 	border-color: rgba(31, 32, 65, 0.25);
-	/*color: rgba(31, 32, 65, 0.25);*/
+	/*color: rgba(31, 32, 65, 0.25);*//*
 }
 
 button[class$="P-Btn"]:hover{
@@ -379,7 +498,7 @@ button[class$="P-Btn"]:hover{
 	width: 100%;
 	height: 100%;
 	/*text-align: right;
-	vertical-align: bottom;*/
+	vertical-align: bottom;*//*
 	justify-content: flex-end;
 	align-items: flex-end;
 }
@@ -390,6 +509,7 @@ button[class$="P-Btn"]:hover{
 	text-align: right;
 
 }
+*/
 
 .footer-container__body{
 	height: 373px;

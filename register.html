@@ -7,7 +7,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/register.css">
 	</head>
 	<body><div class="body-container">
 		<header class="header">
@@ -32,72 +32,56 @@
 			</div>
 		</header>
 		<div class="main-container-out"><main class="main">
-			<form class="mainForm">
-				<div>
-					<h1 data-loc="Text04" style="font-fmily: Quicksand">We'll find a numbers for your desires</h1>
-				</div>
-				<div class="divInlineBlock">
+			<div class="main-container_main-form">
+				<form class="main-form-reg">
 					<div>
-						<h3 data-loc="Arrival">Arrival</h3>
-						<input class="mainForm__arrivalField dropdown-text-field" type="text" name="arrival" placeholder="dd.mm.yyyy" data-loc-ph="dmy" style="width: 152px; background-position: 120px 20px;">
+						<h1 data-loc="AccountRegistration" style="font-fmily: Quicksand">Account Registration</h1>
 					</div>
-					<div style="padding: 0 0 0 11px;">
-						<h3 data-loc="Departure">Departure</h3>
-						<input class="mainForm__departureField dropdown-text-field" type="text" name="departure" placeholder="dd.mm.yyyy" data-loc-ph="dmy" style="width: 152px;  background-position: 120px 20px;">
+					<input class="text-field main-form-reg__text-field" type="text" name="firstName" placeholder="First Name" data-loc-ph="FirstName">
+					<input class="text-field main-form-reg__text-field" type="text" name="lastName" placeholder="Last Name" data-loc-ph="LastName">
+					<div class="main-form-reg__btn-group">
+						<div class="radio-btn">
+							<input class="radio-btn__check-box" type="radio" name="Sex" value="male" checked id="rbSexMale">
+							<label class="radio-btn__label" for="rbSexMale" data-loc="Male">
+								<span class="radio-btn__render"></span>Male
+							</label>
+						</div>
+						<div class="radio-btn">
+							<input class="radio-btn__check-box" type="radio" name="Sex" value="male" id="rbSexFemale">
+							<label class="radio-btn__label" for="rbSexFemale" data-loc="Female">
+								<span class="radio-btn__render"></span>Female
+							</label>
+						</div>
 					</div>
-				</div>
-				<div>
-					<h3 data-loc="Guests">Guests</h3>
-					<input class="mainForm__guestsField dropdown-text-field" type="text" name="guests" placeholder="How many gests" data-loc-ph="HowManyGests" style="width: 320px;  background-position: 286px 20px;">
-				</div>
-				<div>
-					<div class="SubmitButton">
-						<a href="#" data-loc="SelectNumber">Select Number</a>
+					<div class="main-form-reg__ntf-group">
+						<h3 data-loc="DateOfBirth">Date of Birth</h3>
+						<input class="text-field main-form-reg__text-field" type="text" name="dateOfBirth" placeholder="dd.mm.yyyy" data-loc-ph="dmy">
 					</div>
-				</div>
-			</form>
-			<form class="modalFormGuests">
-				<div><h3 data-loc="Adults">Adult</h3>
-					<div class="modalFormGuests_BtnGrp">
-						<button class="RoundButton modalFormGuests_Adults_M-Btn">-</button>
-						<p class="modalFormGuests_Adults">0</p>
-						<button class="RoundButton modalFormGuests_Adults_P-Btn">+</button>
+					<div class="main-form-reg__ntf-group">
+						<h3 data-loc="Account">Account</h3>
+						<input class="text-field main-form-reg__text-field" type="text" name="login" placeholder="Email" data-loc-ph="Email">
+						<input class="text-field main-form-reg__text-field" type="text" name="password" placeholder="Password" data-loc-ph="Password">
 					</div>
-				</div>
-				<div><h3 data-loc="Children">Children</h3>
-					<div class="modalFormGuests_BtnGrp">
-						<button class="RoundButton modalFormGuests_Children_M-Btn">-</button>
-						<p class="modalFormGuests_Children">0</p>
-						<button class="RoundButton modalFormGuests_Children_P-Btn">+</button>
+					<div class="main-form-reg__btn-group">
+						<div class="toggle-btn">
+							<input class="toggle-btn__check-box" type="checkbox" name="GetOffers" checked id="tbGetSpecialOffers">
+							<label class="toggle-btn__label" for="tbGetSpecialOffers" data-loc="GetSpecialOffers">
+								<span class="toggle-btn__render"></span>Get Special Offers
+							</label>
+						</div>
 					</div>
-				</div>
-				<div><h3 data-loc="BabiesInArms">Babies in arms</h3>
-					<div class="modalFormGuests_BtnGrp">
-						<button class="RoundButton modalFormGuests_BabiesInArms_M-Btn">-</button>
-						<p class="modalFormGuests_BabiesInArms">0</p>
-						<button class="RoundButton modalFormGuests_BabiesInArms_P-Btn">+</button>
+					<div>
+						<div class="SubmitButton">
+							<a href="#" data-loc="GoToPayment">Go to payment</a>
+						</div>
 					</div>
-				</div>
-				<div>
-					<button class="modalFormGuests_Clean" data-loc="Clean">Clean</button>
-					<button class="modalFormGuests_Apply" data-loc="Apply">Apply</button>
-				</div>
-			</form>
-			<form class="modalFormDate">
-				<div>
-					<button class="modalFormDate_Arrow2Left"></button>
-					<h1 data-loc="CurrentDate">CurrentDate</h3>
-					<button class="modalFormDate_Arrow2Right"></button>
-				</div>
-				<div class="modalFormDate_DateTable">
-				</div>
-				<div>
-					<button class="modalFormDate_Clean" data-loc="Clean">Clean</button>
-					<button class="modalFormDate_Apply" data-loc="Apply">Apply</button>
-				</div>
-			</form>
-			<div class="main-container-in" >
-				<div class="main-container-in__Signature" data-loc="Text01">The best numbers for your work,<br> rest and just inspiration</div>
+					<div class="main-form-reg__txt-btn-group">
+						<span class="main-form-reg__txt-in-group" data-loc="Text05">You have still Toxin's account</span>
+						<div class="LoginButton">
+							<a href="#" data-loc="Login">Login</a>
+						</div>
+					</div>
+				</form>
 			</div>
 		</main></div>
 		<div class="footer-container">
@@ -172,7 +156,7 @@
 			</footer>
 		</div>				
 	</div>
-	<script src="js/index.js"></script>
+	<script src="js/register.js"></script>
 	<script src="js/locDicRus.js"></script>
 	<script src="js/locDicEng.js"></script>
 	<script src="js/localize.js"></script>
