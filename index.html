@@ -19,14 +19,14 @@
 				</div>
 				<nav class="header__menu">
 					<ul class="header__list">
-						<li><a href="#" data-loc="Home">Home</a></li>
-						<li><a href="#" data-loc="AboutUs">About Us</a></li>
-						<li><a href="#" data-loc="Services">Services</a></li>
-						<li><a href="#" data-loc="Careers">Careers</a></li>
-						<li><a href="#" data-loc="News">News</a></li>
-						<li><a href="#" data-loc="Doc">Documentation</a></li>
-						<li><div class="LoginButton"><a href="#" data-loc="Login" data-loc-img="Login">Login</a></div></li>
-						<li><div class="RegisterButton"><a href="./register.html" data-loc="Register" data-loc-img="Register">Register</a></div></li>
+						<li class="header__item"><a href="#" data-loc="Home">Home</a></li>
+						<li class="header__item"><a href="#" data-loc="AboutUs">About Us</a></li>
+						<li class="header__item"><a href="#" data-loc="Services">Services</a></li>
+						<li class="header__item"><a href="#" data-loc="Careers">Careers</a></li>
+						<li class="header__item"><a href="#" data-loc="News">News</a></li>
+						<li class="header__item"><a href="#" data-loc="Doc">Documentation</a></li>
+						<li class="header__item header__item_btn"><div class="login-btn header__btn"><a href="#" data-loc="Login" data-loc-img="Login">Login</a></div></li>
+						<li class="header__item header__item_btn"><div class="register-btn header__btn"><a href="./register.html" data-loc="Register" data-loc-img="Register">Register</a></div></li>
 					</ul>
 				</nav>
 			</div>
@@ -97,19 +97,39 @@
 				</div>
 			</form>
 			<div class="main-container-in" >
-				<div class="main-container-in__Signature" data-loc="Text01">The best numbers for your work,<br> rest and just inspiration</div>
+				<div class="main-container-in__pager">
+					<div class="radio-btn main-container-in__rbtn-pager">
+						<input class="radio-btn__check-box" type="radio" name="Pager" id="rbPage1" checked onclick="document.querySelector('.body-container').style['background-image']='url(./img/Bg_Room_1ct.png)';">
+						<label class="radio-btn__label" for="rbPage1">
+							<span class="radio-btn__render"></span>
+						</label>
+					</div>					
+					<div class="radio-btn main-container-in__rbtn-pager">
+						<input class="radio-btn__check-box" type="radio" name="Pager" id="rbPage2" onclick="document.querySelector('.body-container').style['background-image']='url(./img/Bg_Room_2ct.png)';">
+						<label class="radio-btn__label" for="rbPage2">
+							<span class="radio-btn__render"></span>
+						</label>
+					</div>					
+					<div class="radio-btn main-container-in__rbtn-pager">
+						<input class="radio-btn__check-box" type="radio" name="Pager" id="rbPage3" onclick="document.querySelector('.body-container').style['background-image']='url(./img/Bg_Room_3ct.png)';">
+						<label class="radio-btn__label" for="rbPage3">
+							<span class="radio-btn__render"></span>
+						</label>
+					</div>					
+				</div>
+				<div class="main-container-in__signature" data-loc="Text01">The best numbers for your work,<br> rest and just inspiration</div>
 			</div>
 		</main></div>
 		<div class="footer-container">
 			<footer>
-				<div class="footer-container__body">
-					<div class="footer-container__body_logo">
+				<div class="footer-body">
+					<div class="footer-body__logo">
 						<a href="#">
 							<img src="img/logo_Toxin.png" alt="logo">
 						</a>
 						<p data-loc="Text02">Seat reservation in the best hotel 2019 by version «Hotel's review» association</p>
 					</div>
-					<div class="footer-container__body_nav">
+					<div class="footer-body__nav">
 						<h3 data-loc="Navigation">Navigation</h3>
 						<ul>
 							<li><a href="#" data-loc="AboutUs">About Us</a></li>
@@ -118,7 +138,7 @@
 							<li><a href="#" data-loc="Products">Products</a></li>
 						</ul>
 					</div>
-					<div class="footer-container__body_nav">
+					<div class="footer-body__nav">
 						<h3 data-loc="AboutUs">About Us</h3>
 						<ul>
 							<li><a href="#" data-loc="WhoWeAre">Who we are</a></li>
@@ -127,19 +147,19 @@
 							<li><a href="#" data-loc="Investors">Investors</a></li>
 						</ul>
 					</div>
-					<div class="footer-container__body_nav">
+					<div class="footer-body__nav">
 						<h3 data-loc="Support">Support</h3>
 						<ul>
 							<li><a href="#" data-loc="Doc">Documentation</a></li>
 							<li><a href="#" data-loc="Community">Community</a></li>
 							<li><a href="#" data-loc="GetInTouch">Get in Touch</a></li>
-							<li class="footer-container__body_engLocLink currentLanguageHide">
+							<li class="eng-loc-link currentLanguageHide">
 								<a href="#" >
 									<img class="flag_UK" src="img/flag_eng.PNG" alt="localize in english">
 									English
 								</a>
 							</li>
-							<li class="footer-container__body_rusLocLink">
+							<li class="rus-loc-link">
 								<a href="#">
 									<img class="flag_russia" src="img/flag_rus.PNG" alt="localize in russian">
 									Русский
@@ -147,22 +167,22 @@
 							</li>
 						</ul>
 					</div>
-					<div class="footer-container__body_subscription">
+					<div class="footer-body__subscription">
 						<h3 data-loc="Subscription">Subscribe to our newsletter</h3>
 						<p data-loc="Text03">Receive our latest news and promotions in your inbox!</p>
-						<div class="footer-container__body_subEmail">
-							<input class="footer-container__body_sbscrField" type="text" name="subscription-email" placeholder="Email" data-loc-ph="SubEMail">
-							<img class="footer-container__body_sbArrow" src="img/arrow2right.PNG" alt="subscribe">
+						<div class="subscription-text-field">
+							<input class="text-field subscription-text-field__txtfld" type="text" name="subscription-email" placeholder="Email" data-loc-ph="SubEMail">
+							<input class="subscription-text-field__btn" type="button" onclick="alert('You\'ve subscripted!');">
 						</div>
 					</div>
 				
 				</div>
-				<div class="footer-container__bottom">
-					<div class="footer-container__bottom_rights">
+				<div class="footer-sole">
+					<div class="footer-sole__rights">
 						<a href="#" data-loc="Copyright">Copyright &copy; 2018 Toxin Hotel. All rights reserved.</a>
 					</div>
-					<div class="footer-container__bottom_socials">
-						<ul class="footer-container__bottom_socials_list">
+					<div class="footer-sole__socials">
+						<ul class="footer-sole__socials-list">
 							<li><a href="#"><img src="img/logo_twitter.png" alt="twitter"></a></li>
 							<li><a href="#"><img src="img/logo_facebook.png" alt="facebook"></a></li>
 							<li><a href="#"><img src="img/logo_instagramm.png" alt="instagramm"></a></li>

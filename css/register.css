@@ -23,7 +23,7 @@
 .main-form-reg{
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	border-radius: 5px;
-	padding: 31px 29px;
+	padding: 35px 29px;
 	background-color: #fff;
 	position: relative;
 	left: 530px;
@@ -50,17 +50,29 @@
 	margin-top: 3px;	
 }
 .main-form-reg__txt-btn-group{
+	margin-top: 35px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 }
 .main-form-reg__txt-in-group{
 	vertical-align: middle;
+	color: black;
+
 }
 .main-form-reg__text-field{
 	margin: 5px 0;
 	width:100%;
 }
+.main-form-reg__lg-btn{
+	padding: 14px 20px;
+	/*background-size: 79px 45px;*/
+}
+
+/*.main-form-reg__lg-btn a{
+	padding: 14px 15px 14px 15px;
+}*/	
 
 /*.main-form-reg__first-name,
 .main-form-reg__last-name,

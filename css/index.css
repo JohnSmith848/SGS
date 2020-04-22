@@ -181,19 +181,26 @@ button[class$="P-Btn"]:hover{
 	display: block;
 }
 .main-container-in{
-	display: flex;
 	width: 100%;
 	height: 100%;
-	/*text-align: right;
-	vertical-align: bottom;*/
+	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
+	flex-direction: column;
 }
-.main-container-in__Signature{
+
+.main-container-in__pager{
+	padding: 0 140px 0 0; 
+}
+
+.main-container-in__rbtn-pager{
+	padding: 0 0 0 25px;
+	min-height: 25px;
+}
+.main-container-in__signature{
 	padding: 0 140px 29px 0; 
 	color: rgba(31, 32, 65, 0.75);
 	line-height: 24px;
 	text-align: right;
-
 }
 
