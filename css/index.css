@@ -7,7 +7,6 @@
 .main-container-out{
 	/*max-width: 1440px;*/
 	height: 830px;
-	border: 1px solid #000;
 }
 .main{
 	height: 100%;
@@ -18,10 +17,10 @@
 
 }*/
 
-.mainForm{
+.main-form-ind{
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	border-radius: 5px;
-	padding: 31px 29px;
+	padding: 39px 29px 39px 29px;
 	background-color: #fff;
 	position: absolute;
 	left: 140px;
@@ -29,16 +28,29 @@
 	width: 379px;
 	height: 375px;
 }
-.divInlineBlock div{
+.main-form-ind__dates{
+	margin:22px 0 0 0;
+}
+.main-form-ind__guests{
+	margin:16px 0 0 0;
+}
+.main-form-ind__dates div{
 	display: inline-block;
 }
-.mainForm h3{
+.main-form-ind__submit{
+	margin:25px 0 0 0;
+	height:45px;
+}
+.main-form-ind__dd-txt-fld{
+	margin: 5px 0;
+}
+/*.mainForm h3{
 	padding: 5px 0 5px 0;	
 }
 .mainForm > div{
 	padding: 15px 0 0 0;	
 }
-/*in style.css
+in style.css
 .mainForm__SubmitBtn{
 	height: 45px;
 	font-weight: bold;  

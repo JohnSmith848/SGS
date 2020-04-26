@@ -6,6 +6,7 @@
 		<!--link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet"-->
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
@@ -25,36 +26,54 @@
 						<li class="header__item"><a href="#" data-loc="Careers">Careers</a></li>
 						<li class="header__item"><a href="#" data-loc="News">News</a></li>
 						<li class="header__item"><a href="#" data-loc="Doc">Documentation</a></li>
-						<li class="header__item header__item_btn"><div class="login-btn header__btn"><a href="#" data-loc="Login" data-loc-img="Login">Login</a></div></li>
-						<li class="header__item header__item_btn"><div class="register-btn header__btn"><a href="./register.html" data-loc="Register" data-loc-img="Register">Register</a></div></li>
+						<li class="header__item header__item_btn">
+							<div class="gradient-btn header__item-btn-log">
+								<div class="gradient-btn__render">
+									<a class="gradient-btn__text gradient-btn__text_def" href="./login.html" data-loc="Login">Login</a>
+								</div>
+							</div>
+						</li>
+						<li class="header__item header__item_btn">
+							<div class="gradient-btn header__item-btn-reg">
+								<div class="gradient-btn__render">
+									<a class="gradient-btn__text gradient-btn__text_def" href="./register.html" data-loc="Register">Register</a>
+								</div>
+							</div>
+						</li>	
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<div class="main-container-out"><main class="main">
-			<form class="mainForm">
+			<form class="main-form-ind">
 				<div>
 					<h1 data-loc="Text04" style="font-fmily: Quicksand">We'll find a numbers for your desires</h1>
 				</div>
-				<div class="divInlineBlock">
+				<div class="main-form-ind__dates">
 					<div>
 						<h3 data-loc="Arrival">Arrival</h3>
-						<input class="mainForm__arrivalField dropdown-text-field" type="text" name="arrival" placeholder="dd.mm.yyyy" data-loc-ph="dmy" style="width: 152px; background-position: 120px 20px;">
+						<input class="mainForm__arrivalField dropdown-text-field main-form-ind__dd-txt-fld" type="text" name="arrival" placeholder="dd.mm.yyyy" data-loc-ph="dmy" style="width: 152px; background-position: 120px 20px;">
 					</div>
 					<div style="padding: 0 0 0 11px;">
 						<h3 data-loc="Departure">Departure</h3>
-						<input class="mainForm__departureField dropdown-text-field" type="text" name="departure" placeholder="dd.mm.yyyy" data-loc-ph="dmy" style="width: 152px;  background-position: 120px 20px;">
+						<input class="mainForm__departureField dropdown-text-field main-form-ind__dd-txt-fld" type="text" name="departure" placeholder="dd.mm.yyyy" data-loc-ph="dmy" style="width: 152px;  background-position: 120px 20px;">
 					</div>
 				</div>
-				<div>
+				<div class="main-form-ind__guests">
 					<h3 data-loc="Guests">Guests</h3>
-					<input class="mainForm__guestsField dropdown-text-field" type="text" name="guests" placeholder="How many gests" data-loc-ph="HowManyGests" style="width: 320px;  background-position: 286px 20px;">
+					<input class="mainForm__guestsField dropdown-text-field main-form-ind__dd-txt-fld" type="text" name="guests" placeholder="How many gests" data-loc-ph="HowManyGests" style="width: 320px;  background-position: 286px 20px;">
 				</div>
-				<div>
+				<div class="gradient-btn gradient-btn_arrowed main-form-ind__submit">
+					<input class="gradient-btn__btn" type="button" name="grd-btn">
+					<div class="gradient-btn__render">
+						<a class="gradient-btn__text gradient-btn__text_def" href="#" data-loc="SelectNumber">Select Number</a>
+					</div>
+				</div>
+				<!--div>
 					<div class="SubmitButton">
 						<a href="#" data-loc="SelectNumber">Select Number</a>
 					</div>
-				</div>
+				</div-->
 			</form>
 			<form class="modalFormGuests">
 				<div><h3 data-loc="Adults">Adult</h3>

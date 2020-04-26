@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/register.css">
+		<link rel="stylesheet" type="text/css" href="css/login.css">
 	</head>
 	<body><div class="body-container">
 		<header class="header">
@@ -46,68 +46,29 @@
 		</header>
 		<div class="main-container-out"><main class="main">
 			<div class="main-container_main-form">
-				<form class="main-form-reg">
-					<h1 class="main-forms-h1" data-loc="AccountRegistration" style="font-fmily: Quicksand">Account Registration</h1>
-					<input class="text-field main-form-reg__text-field" type="text" name="firstName" placeholder="First Name" data-loc-ph="FirstName">
-					<input class="text-field main-form-reg__text-field" type="text" name="lastName" placeholder="Last Name" data-loc-ph="LastName">
-					<div class="main-form-reg__btn-group">
-						<div class="radio-btn">
-							<input class="radio-btn__check-box" type="radio" name="Sex" value="male" checked id="rbSexMale">
-							<label class="radio-btn__label" for="rbSexMale" data-loc="Male">
-								<span class="radio-btn__render"></span>Male
-							</label>
-						</div>
-						<div class="radio-btn">
-							<input class="radio-btn__check-box" type="radio" name="Sex" value="male" id="rbSexFemale">
-							<label class="radio-btn__label" for="rbSexFemale" data-loc="Female">
-								<span class="radio-btn__render"></span>Female
-							</label>
+				<form class="main-form-log">
+					<h1 class="main-forms-h1" data-loc="Login" style="font-fmily: Quicksand">Login</h1>
+					<input class="text-field main-form-log__text-field" type="text" name="login" placeholder="Email" data-loc-ph="Email">
+					<input class="text-field main-form-log__text-field" type="text" name="password" placeholder="Password" data-loc-ph="Password">
+					<div class="gradient-btn gradient-btn_arrowed main-form-log__submit-btn">
+						<input class="gradient-btn__btn" type="button" name="grd-btn">
+						<div class="gradient-btn__render">
+							<a class="gradient-btn__text gradient-btn__text_def" href="#" data-loc="Login">Login</a>
 						</div>
 					</div>
-					<div class="main-form-reg__ntf-group">
-						<h3 data-loc="DateOfBirth">Date of Birth</h3>
-						<input class="text-field main-form-reg__text-field" type="text" name="dateOfBirth" placeholder="dd.mm.yyyy" data-loc-ph="dmy">
-					</div>
-					<div class="main-form-reg__ntf-group">
-						<h3 data-loc="Account">Account</h3>
-						<input class="text-field main-form-reg__text-field" type="text" name="login" placeholder="Email" data-loc-ph="Email">
-						<input class="text-field main-form-reg__text-field" type="text" name="password" placeholder="Password" data-loc-ph="Password">
-					</div>
-					<div class="main-form-reg__btn-group">
-						<div class="toggle-btn">
-							<input class="toggle-btn__check-box" type="checkbox" name="GetOffers" checked id="tbGetSpecialOffers">
-							<label class="toggle-btn__label" for="tbGetSpecialOffers" data-loc="GetSpecialOffers">
-								<span class="toggle-btn__render"></span>Get Special Offers
-							</label>
-						</div>
-					</div>
-					<div>
-						<div class="gradient-btn gradient-btn_arrowed main-form-reg__submit-btn">
+					<div class="main-form-log__txt-btn-group">
+						<span class="main-form-log__txt-in-group" data-loc="Text06">Have you not Toxin's account?</span>
+						<div class="gradient-btn main-form-log__register-btn">
 							<input class="gradient-btn__btn" type="button" name="grd-btn">
 							<div class="gradient-btn__render">
-								<a class="gradient-btn__text gradient-btn__text_def" href="#" data-loc="GoToPayment">Go to payment</a>
+								<a class="gradient-btn__text gradient-btn__text_def" href="">Register</a>
 							</div>
 						</div>
-						<!--div class="SubmitButton">
-							<a href="#" data-loc="GoToPayment">Go to payment</a>
-						</div-->
-					</div>
-					<div class="main-form-reg__txt-btn-group">
-						<span class="main-form-reg__txt-in-group" data-loc="Text05">You have still Toxin's account</span>
-						<div class="gradient-btn main-form-reg__login-btn">
-							<div class="gradient-btn__render">
-								<a class="gradient-btn__text gradient-btn__text_def" href="./login.html" data-loc="Login">Login</a>
-							</div>
-						</div>
-						<!--div class="login-btn main-form-reg__lg-btn">
-							<a href="#" data-loc="Login">Login</a>
-						</div-->
 					</div>
 				</form>
 			</div>
 		</main></div>
 		<div class="footer-container">
-			<footer>
 			<footer>
 				<div class="footer-body">
 					<div class="footer-body__logo">
@@ -176,7 +137,6 @@
 						</ul>
 					</div>
 				</div>
-			</footer>
 			</footer>
 		</div>				
 	</div>

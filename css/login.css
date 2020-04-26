@@ -1,0 +1,66 @@
+.body-container{
+	background-image: url(../img/Bg_LogReg_ct.png);
+	background-size: 1440px 772px;
+	background-repeat: no-repeat;
+}
+
+.main-container-out{
+	/*max-width: 1440px;*/
+	height: 702px;
+}
+.main{
+	height: 100%;
+}
+
+.main-form-log{
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 5px;
+	padding: 38px 29px 30px 29px;
+	background-color: #fff;
+	position: relative;
+	left: 530px;
+	top: 30px;
+	width: 380px;
+	height: 358px;
+}
+
+/*.main-form-log h1{
+	padding-bottom: 15px;	
+}*/
+
+.main-form-log__txt-btn-group{
+	margin-top: 29px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.main-form-log__txt-in-group{
+	vertical-align: middle;
+	color: black;
+
+}
+.main-form-log__text-field{
+	margin: 5px 0;
+	width:100%;
+  /*height:44px;*/
+}
+.main-form-log__rg-btn{
+	padding: 14px 20px;
+	/*background-size: 79px 45px;*/
+}
+
+.main-form-log__submit-btn{
+  margin-top: 15px;
+  width: 100%;
+  height: 44px;
+ /* font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;*/
+}
+
+.main-form-log__register-btn{
+  width: 101px;
+  height: 44px;
+
+}

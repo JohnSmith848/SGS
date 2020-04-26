@@ -51,11 +51,16 @@ li{
 	padding: 0;
 }
 
-/*common style form controls*/
-/*1. any text fields styles*/
+.main-forms-h1{
+	margin-bottom: 17px;
+	font-weight: bold;
+}
+
+/*2. common style form controls*/
+/*2.1. all text fields styles*/
 .text-field,
 .dropdown-text-field{
-	height:45px;
+	height:44px;
 	width:100%;
 	border: 1px solid rgba(31, 32, 65, 0.25);
 	border-radius: 5px;
@@ -99,8 +104,114 @@ li{
 	background-repeat: no-repeat;
 }
 
-/*2. any buttons styles*/
+/*2.2. all buttons styles*/
 
+/*2.2.1 gradient button styles*/
+.gradient-btn{
+  /*width: 100px;*/  
+  position: relative;
+  border-radius: 32px;
+  height: 64px;
+}
+.gradient-btn__btn:disabled+.gradient-btn__render{
+  opacity: 0.5;
+}
+.gradient-btn:hover > .gradient-btn__render::before{
+  background: rgba(255,255,255,1);
+}
+.gradient-btn:hover .gradient-btn__text{
+  color: #bc9cff;
+}
+.gradient-btn_arrowed:after{
+  /*content: "\ea3c";
+  font-family: 'icomoon';*/
+  content: "\ea3c";
+  font-family: 'icomoon';
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 4;
+  color: white;
+}
+.gradient-btn:hover.gradient-btn_arrowed:after{
+  color: #bc9cff;
+}
+.gradient-btn__render{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.gradient-btn__render::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  z-index: 1;
+}
+.gradient-btn__render::before{
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: inherit;
+  background: rgba(255,255,255,0);
+  z-index: 2;
+}
+.gradient-btn__text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  color: white;
+}
+.gradient-btn__text_def{
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.gradient-btn__btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  border-width: 0;
+  background: rgba(255,255,255,0);  
+  z-index: 4;
+}
+/*2.2.1 end*/
+
+/*2.2.2 Round button styles (Buttons for guests subform)*/
+.RoundButton {
+	border-radius: 15px;
+	border: 1px solid rgba(31, 32, 65, 0.05);
+	background-color: #fff;
+	padding: 3px 11px 4px 9px;
+	width: 30px;
+	height: 30px;
+	font-size: 18px;
+	line-height: 22px;
+	color: rgba(31, 32, 65, 0.25);
+}
+
+/*2.2.2 end*/
+/*2.2.x old buttons styles*/
 .SubmitButton{
 	height: 45px;
 	font-weight: bold;  
@@ -125,18 +236,6 @@ li{
 .SubmitButton a{
 	color: inherit;
 	padding: 15px 0px 15px 0px;
-}
-
-.RoundButton {
-	border-radius: 15px;
-	border: 1px solid rgba(31, 32, 65, 0.05);
-	background-color: #fff;
-	padding: 3px 11px 4px 9px;
-	width: 30px;
-	height: 30px;
-	font-size: 18px;
-	line-height: 22px;
-	color: rgba(31, 32, 65, 0.25);
 }
 
 .login-btn{
@@ -187,8 +286,10 @@ li{
 	background-image: url(../img/Bg_btn_Register_rus_hover.png);	
 	background-size: 196px 34px;	
 }
+/*2.2.x end*/
+/*2.2 end*/
 
-/*3. any radio buttons styles*/
+/*2.3 any radio buttons styles*/
 
 .radio-btn{
   position: relative;
@@ -242,8 +343,9 @@ li{
 .radio-btn__check-box:checked + .radio-btn__label {
   color: rgba(31, 32, 65, 0.75);
 }
+/*2.3 end*/
 
-/*4. any toggles styles*/
+/*2.4. any toggles styles*/
 
 .toggle-btn{
   position: relative;
@@ -304,8 +406,10 @@ li{
   outline: none;
   box-shadow: 0 0 1px 2px white, 0 0 3px 3px rgba(255, 0, 0, 0.3);
 }
+/*2.4 end*/
+/*2 end*/
 
-/*Common header for all pages*/
+/*3. Common header for all pages*/
 /**/
 
 .body-container{
@@ -314,8 +418,8 @@ li{
 }
 
 .header{
-	/*for debug, later remove*/
-	border: 1px solid #000;
+	/*for debug, later remove
+	border: 1px solid #000;*/
 	/*for debug, later remove
 	border: 1px solid #000;
 	vertical-align: middle;
@@ -340,29 +444,35 @@ li{
 }
 .header__list{
 	float: right;
+	display:flex;
+	justify-content:flex-end;
+	align-items: center;
 	padding: 15px 125px 15px 0;/*right=140-15*/
 }
 
 .header__item{
-	display: inline-block;
-	padding: 9px 15px;
-	color: rgba(31, 32, 65, 0.5);
-
+  position:relative;
+  padding: 9px 15px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.header__item:hover{
+	color: rgba(31, 32, 65, 0.75);
+	font-weight: bold; 
 }
 
 .header__item_btn{
+	padding: 0 0 0 20px;
+}
+.header__item-btn-log{
 	height: 34px;
-	padding: 0;
+	border-radius: 17px;
+	width: 79px;
 }
 
-.header__item:hover{
-	color: rgba(31, 32, 65, 0.75);
-	font-weight: bold;  
-}
-
-.header__btn{
-	/*margin: auto 0;
-	height:37px;*/
+.header__item-btn-reg{
+	height: 34px;
+	border-radius: 17px;
+	width: 101px;
 }
 
 /*.header__list a{
@@ -386,7 +496,6 @@ li{
 .footer-body{
 	height: 373px;
 	padding: 0 140px 0 140px; 
-	border: 1px solid #000;
 	display: flex;
 	justify-content: space-between; 
 }
@@ -406,14 +515,12 @@ li{
 .footer-body__logo{
 	width: 260px; /*22.4%;*/
 	height: 373px;
-	border: 1px solid #000;
 	padding: 90px 0 0 0;
 }
 
 .footer-body__nav{
 	width: 18.1%;
 	height: 373px;
-	border: 1px solid #000;
 	margin: 0;
 	padding: 90px 40px 0 40px;
 	flex-grow: 1;
@@ -434,7 +541,6 @@ img[ class^="flag_"]{
 .footer-body__subscription{
 	width: 260px; /*22.4%;*/
 	height: 373px;
-	border: 1px solid #000;
 	padding: 90px 0 0 0;
 
 }
@@ -449,7 +555,6 @@ img[ class^="flag_"]{
 	height: 70px;
 	padding: 0 15px; 
 	vertical-align: middle;
-	border: 1px solid #000;
 
 }
 
