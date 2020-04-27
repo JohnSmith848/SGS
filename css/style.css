@@ -75,7 +75,7 @@ li{
 	color: rgba(31, 32, 65, 0.5);
 }
 
-.text-field-active{
+.text-field_active{
 	border: 1px solid rgba(31, 32, 65, 0.5);
 	color: rgba(31, 32, 65, 0.5);
 }
@@ -197,7 +197,7 @@ li{
 }
 /*2.2.1 end*/
 
-/*2.2.2 Round button styles (Buttons for guests subform)*/
+/*2.2.2 Round button styles (Buttons for modal form guests)*/
 .RoundButton {
 	border-radius: 15px;
 	border: 1px solid rgba(31, 32, 65, 0.05);
@@ -529,8 +529,8 @@ li{
 .footer-body__nav li:not([class*='loc-link']){
 	padding: 10px 0;
 }
-.eng-loc-link,
-.rus-loc-link{
+.loc-link-eng,
+.loc-link-rus{
 	padding: 10px 0;
 }
 
@@ -538,6 +538,13 @@ img[ class^="flag_"]{
 	width:24px;
 	margin: 0 5px 0 0;
 }
+
+.loc-link_hidden-lang{
+	display: none;
+	padding: 0;
+
+}
+
 .footer-body__subscription{
 	width: 260px; /*22.4%;*/
 	height: 373px;
@@ -545,11 +552,6 @@ img[ class^="flag_"]{
 
 }
 
-.currentLanguageHide{
-	display: none;
-	padding: 0;
-
-}
 
 .footer-sole{
 	height: 70px;

@@ -139,18 +139,6 @@ in style.css
 .modalFormGuests button{
 	outline-width: 0;
 }
-/*in style.css
-.RoundButton {
-	border-radius: 15px;
-	border: 1px solid rgba(31, 32, 65, 0.05);
-	background-color: #fff;
-	padding: 3px 11px 4px 9px;
-	width: 30px;
-	height: 30px;
-	font-size: 18px;
-	line-height: 22px;
-	color: rgba(31, 32, 65, 0.25);
-}*/
 
 button[class$="P-Btn"]{
 	border-color: rgba(31, 32, 65, 0.25);
@@ -189,7 +177,7 @@ button[class$="P-Btn"]:hover{
 	color: #bc9cff;
 }
 
-.modal-show{
+.modal-form_show{
 	display: block;
 }
 .main-container-in{

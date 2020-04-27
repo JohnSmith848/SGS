@@ -28,12 +28,13 @@ const RussianDictionary={
 	Adults: "Взрослые",
 	Children: "Дети",
 	BabiesInArms: "Младенцы",
-	SelectNumber: "Подобрать номер",
+	//SelectNumber: "Подобрать номер",
 	Subscription: "Подписка",
 }
-const ImageRussianDictionary={
-	Login: "header_list_Login_Rus",
-	Register: "header_list_Register_Rus",
+const GBBRussianDictionary={
+	Login: ["Войти", "87px"],
+	Register: ["Зарегистрироваться", "196px"],
+	SelectNumber: ["Подобрать номер", "100%"],
 }
 const PlaceholderRussianDictionary={
 	dmy:{Default: "дд.мм.гггг"},

@@ -28,12 +28,13 @@ const EnglishDictionary={
 	Adults: "Adults",
 	Children: "Children",
 	BabiesInArms: "Babies in Arms",
-	SelectNumber: "Select Number",
+	//SelectNumber: "Select Number",
 	Subscription: "Subscribe to Our Newsletter",
 }
-const ImageEnglishDictionary={
-	Login: "header_list_Login_Rus",
-	Register: "header_list_Register_Rus",
+const GBBEnglishDictionary={
+	Login: ["Login", "79px"],
+	Register: ["Register", "101px"],
+	SelectNumber: ["Select Number", "100%"],
 }
 const PlaceholderEnglishDictionary={
 	dmy:{Default: "dd.mm.yyyy"},

@@ -1,6 +1,6 @@
-const rusLoc = document.querySelector('.footer-container__body_rusLocLink');
-const engLoc = document.querySelector('.footer-container__body_engLocLink');
-let curLoc = document.querySelector('.currentLanguageHide');// The hidden <li> element for the current language 
+const rusLoc = document.querySelector('.loc-link-rus');
+const engLoc = document.querySelector('.loc-link-eng');
+let curLoc = document.querySelector('.loc-link_hidden-lang');// The hidden <li> element for the current language 
 
 rusLoc.addEventListener(
 	'click',
@@ -17,22 +17,22 @@ rusLoc.addEventListener(
 					tE[i].textContent=RussianDictionary[tE[i].getAttribute("data-loc")];
 				}
 			}
-			// 1.2 in the background images
-			if (tE[i].hasAttribute("data-loc-img")){
-				tE[i].parentNode.classList.add(ImageRussianDictionary[tE[i].getAttribute("data-loc-img")]);
-				tE[i].parentNode.classList.add(ImageRussianDictionary[tE[i].getAttribute("data-loc-img")]+":hover");
-			}
-			// 1.3 in the placeholder attributes
-			if (tE[i].hasAttribute("data-loc-ph")){
-				for (let x in tE[i].parentNode.style){
+			// 1.2 in the gradient background button
+			if (tE[i].hasAttribute("data-loc-gbb")){
+				tE[i].textContent=GBBRussianDictionary[tE[i].getAttribute("data-loc-gbb")][0];
+				tE[i].parentNode.parentNode.style["width"]=GBBRussianDictionary[tE[i].getAttribute("data-loc-gbb")][1];
 				}
-				tE[i].placeholder=PlaceholderRussianDictionary[tE[i].getAttribute("data-loc-ph")].Default;
-			}
+//			// 1.3 in the placeholder attributes
+//			if (tE[i].hasAttribute("data-loc-ph")){
+//				for (let x in tE[i].parentNode.style){
+//				}
+//				tE[i].placeholder=PlaceholderRussianDictionary[tE[i].getAttribute("data-loc-ph")].Default;
+//			}
 		}
 		// 2. Change the localizing links
-		rusLoc.classList.add('currentLanguageHide')
-		curLoc.classList.remove('currentLanguageHide');
-		curLoc = document.querySelector('.currentLanguageHide'); 
+		rusLoc.classList.add('loc-link_hidden-lang')
+		curLoc.classList.remove('loc-link_hidden-lang');
+		curLoc = document.querySelector('.loc-link_hidden-lang'); 
 	}
 );
 
@@ -52,21 +52,21 @@ engLoc.addEventListener(
 				}
 			}
 			// 1.2 in the background images
-			if (tE[i].hasAttribute("data-loc-img")){
-				tE[i].parentNode.classList.remove(ImageEnglishDictionary[tE[i].getAttribute("data-loc-img")]);
-				tE[i].parentNode.classList.remove(ImageEnglishDictionary[tE[i].getAttribute("data-loc-img")]+":hover");
+			if (tE[i].hasAttribute("data-loc-gbb")){
+				tE[i].textContent=GBBEnglishDictionary[tE[i].getAttribute("data-loc-gbb")][0];
+				tE[i].parentNode.parentNode.style.width=GBBEnglishDictionary[tE[i].getAttribute("data-loc-gbb")][1];
 			}
-			// 1.3 in the placeholder attributes
-			if (tE[i].hasAttribute("data-loc-ph")){
-				for (let x in tE[i].parentNode.style){
-				}
-				tE[i].placeholder=PlaceholderEnglishDictionary[tE[i].getAttribute("data-loc-ph")].Default;
-			}
+//			// 1.3 in the placeholder attributes
+//			if (tE[i].hasAttribute("data-loc-ph")){
+//				for (let x in tE[i].parentNode.style){
+//				}
+//				tE[i].placeholder=PlaceholderEnglishDictionary[tE[i].getAttribute("data-loc-ph")].Default;
+//			}
 		}
 		// 2. Change the localize links
-		engLoc.classList.add('currentLanguageHide')
-		curLoc.classList.remove('currentLanguageHide');
-		curLoc = document.querySelector('.currentLanguageHide'); 
+		engLoc.classList.add('loc-link_hidden-lang')
+		curLoc.classList.remove('loc-link_hidden-lang');
+		curLoc = document.querySelector('.loc-link_hidden-lang'); 
 	}
 );
 
