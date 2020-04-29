@@ -12,6 +12,8 @@ const RussianDictionary={
 	Text02: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
 	Text03: "Получайте специальные предложения и новости сервиса",
 	Text04: "Найдем номера под ваши пожелания",
+	Text05: "Уже есть аккаунт на Toxin",
+	Text06: "Нет аккаунта на Toxin?",
 	Copyright: "Авторские права © 2018 Токсин отель. Все права защищены.",
 	Navigation: "Навигация",
 	Support: "Служба поддержки",
@@ -28,13 +30,18 @@ const RussianDictionary={
 	Adults: "Взрослые",
 	Children: "Дети",
 	BabiesInArms: "Младенцы",
-	//SelectNumber: "Подобрать номер",
 	Subscription: "Подписка",
+	AccountRegistration: "Регистрация аккаунта",
+	Male: "Мужчина",
+	Female: "Женщина",
+	DateOfBirth: "Дата рождения",
+	GetSpecialOffers: "Получать спецпредложения"
 }
 const GBBRussianDictionary={
 	Login: ["Войти", "87px"],
 	Register: ["Зарегистрироваться", "196px"],
 	SelectNumber: ["Подобрать номер", "100%"],
+	GoToPayment: ["Перейти к оплате", "100%"],
 }
 const PlaceholderRussianDictionary={
 	dmy:{Default: "дд.мм.гггг"},

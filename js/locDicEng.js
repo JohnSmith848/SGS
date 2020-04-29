@@ -12,6 +12,8 @@ const EnglishDictionary={
 	Text02: "Seat reservation in the best hotel 2019 by version «Hotel's review» association",
 	Text03: "Receive our latest news and promotions in your inbox!",
 	Text04: "We'll find a numbers for your desires",
+	Text05: "You have still Toxin's account",
+	Text06: "Have you not Toxin's account?",
 	Copyright: "Copyright © 2018 Toxin Hotel. All rights reserved.",
 	Navigation: "Navigation",
 	Support: "Support",
@@ -28,13 +30,18 @@ const EnglishDictionary={
 	Adults: "Adults",
 	Children: "Children",
 	BabiesInArms: "Babies in Arms",
-	//SelectNumber: "Select Number",
 	Subscription: "Subscribe to Our Newsletter",
+	AccountRegistration: "Account Registration",
+	Male: "Male",
+	Female: "Female",
+	DateOfBirth: "DateOfBirth",
+	GetSpecialOffers: "Get Special Offers"
 }
 const GBBEnglishDictionary={
 	Login: ["Login", "79px"],
 	Register: ["Register", "101px"],
 	SelectNumber: ["Select Number", "100%"],
+	GoToPayment: ["Go to payment", "100%"],
 }
 const PlaceholderEnglishDictionary={
 	dmy:{Default: "dd.mm.yyyy"},
