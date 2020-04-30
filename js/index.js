@@ -4,27 +4,27 @@ const arrivalField = document.querySelector('.mainForm__arrivalField');
 const departureField = document.querySelector('.mainForm__departureField');
 
 // the modal form date elements
-const modalFormDate = document.querySelector('.modalFormDate');
+const modalFormDate = document.querySelector('.modal-form-date');
 const modalFormDate_DT = document.querySelector('.modalFormDate_DateTable');
 const mFD_Apply = document.querySelector('.modalFormDate_Apply');
 const mFD_Clean = document.querySelector('.modalFormDate_Clean');
 
 // the modal form guests elements
-const modalFormGuests = document.querySelector('.modalFormGuests');
-const mFG_Apply = document.querySelector('.modalFormGuests_Apply');
-const mFG_Clean = document.querySelector('.modalFormGuests_Clean');
+const modalFormGuests = document.querySelector('.modal-form-guests');
+const mFG_Apply = document.querySelector('.mfg__btn-apply');
+const mFG_Clean = document.querySelector('.mfg__btn-clean');
 let AdultsGuestsCount=0;
-const mFG_Adults= document.querySelector('.modalFormGuests_Adults');
-const mFG_Adults_M= document.querySelector('.modalFormGuests_Adults_M-Btn');
-const mFG_Adults_P= document.querySelector('.modalFormGuests_Adults_P-Btn');
+const mFG_Adults= document.querySelector('.mfg__adults');
+const mFG_Adults_M= document.querySelector('.mfg__adults-m-btn');
+const mFG_Adults_P= document.querySelector('.mfg__adults-p-btn');
 let ChildrenGuestsCount=0;
-const mFG_Children= document.querySelector('.modalFormGuests_Children');
-const mFG_Children_M= document.querySelector('.modalFormGuests_Children_M-Btn');
-const mFG_Children_P= document.querySelector('.modalFormGuests_Children_P-Btn');
+const mFG_Children= document.querySelector('.mfg__children');
+const mFG_Children_M= document.querySelector('.mfg__children-m-btn');
+const mFG_Children_P= document.querySelector('.mfg__children-p-btn');
 let BiAGuestsCount=0;
-const mFG_BiA= document.querySelector('.modalFormGuests_BabiesInArms');
-const mFG_BiA_M= document.querySelector('.modalFormGuests_BabiesInArms_M-Btn');
-const mFG_BiA_P= document.querySelector('.modalFormGuests_BabiesInArms_P-Btn');
+const mFG_BiA= document.querySelector('.mfg__babies-in-arms');
+const mFG_BiA_M= document.querySelector('.mfg__babies-in-arms-m-btn');
+const mFG_BiA_P= document.querySelector('.mfg__babies-in-arms-p-btn');
 
 // the gests form events processing
 guestsField.addEventListener(
@@ -61,7 +61,7 @@ mFG_Adults_P.addEventListener(
 		evt.preventDefault();
 		AdultsGuestsCount=+mFG_Adults.childNodes[0].data;
 		if (AdultsGuestsCount==0){
-			mFG_Adults_M.classList.add("M-Btn-active");
+			mFG_Adults_M.classList.add("m-btn-active");
 		}
 		AdultsGuestsCount++;
 		mFG_Adults.childNodes[0].data=String(AdultsGuestsCount);
@@ -76,7 +76,7 @@ mFG_Adults_M.addEventListener(
 			AdultsGuestsCount--
 			mFG_Adults.childNodes[0].data=String(AdultsGuestsCount);
 			if (AdultsGuestsCount==0){
-				mFG_Adults_M.classList.remove("M-Btn-active");
+				mFG_Adults_M.classList.remove("m-btn-active");
 			}
 		}
 	}
@@ -88,7 +88,7 @@ mFG_Children_P.addEventListener(
 		evt.preventDefault();
 		ChildrenGuestsCount=+mFG_Children.childNodes[0].data;
 		if (ChildrenGuestsCount==0){
-			mFG_Children_M.classList.add("M-Btn-active");
+			mFG_Children_M.classList.add("m-btn-active");
 		}
 		ChildrenGuestsCount++;
 		mFG_Children.childNodes[0].data=String(ChildrenGuestsCount);
@@ -103,7 +103,7 @@ mFG_Children_M.addEventListener(
 			ChildrenGuestsCount--
 			mFG_Children.childNodes[0].data=String(ChildrenGuestsCount);
 			if (ChildrenGuestsCount==0){
-				mFG_Children_M.classList.remove("M-Btn-active");
+				mFG_Children_M.classList.remove("m-btn-active");
 			}
 		}
 	}
@@ -115,7 +115,7 @@ mFG_BiA_P.addEventListener(
 		evt.preventDefault();
 		BiAGuestsCount=+mFG_BiA.childNodes[0].data;
 		if (BiAGuestsCount==0){
-			mFG_BiA_M.classList.add("M-Btn-active");
+			mFG_BiA_M.classList.add("m-btn-active");
 		}
 		BiAGuestsCount++;
 		mFG_BiA.childNodes[0].data=String(BiAGuestsCount);
@@ -130,7 +130,7 @@ mFG_BiA_M.addEventListener(
 			BiAGuestsCount--
 			mFG_BiA.childNodes[0].data=String(BiAGuestsCount);
 			if (BiAGuestsCount==0){
-				mFG_BiA_M.classList.remove("M-Btn-active");
+				mFG_BiA_M.classList.remove("m-btn-active");
 			}
 		}
 	}

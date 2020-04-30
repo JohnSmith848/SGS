@@ -67,6 +67,7 @@ li{
 	color: rgba(31, 32, 65, 0.25);
 	padding: 13px;
 	outline: 0px
+	background-color:white;
 }
 
 .text-field:hover,
@@ -197,12 +198,12 @@ li{
 }
 /*2.2.1 end*/
 
-/*2.2.2 Round button styles (Buttons for modal form guests)*/
-.RoundButton {
+/*2.2.2 Round button styles (Buttons for modal form guests) and his grouping controls*/
+.round-button {
 	border-radius: 15px;
 	border: 1px solid rgba(31, 32, 65, 0.05);
 	background-color: #fff;
-	padding: 3px 11px 4px 9px;
+	padding: 3px 10px 4px 10px;
 	width: 30px;
 	height: 30px;
 	font-size: 18px;
@@ -210,7 +211,65 @@ li{
 	color: rgba(31, 32, 65, 0.25);
 }
 
+.round-counter{
+	width:90px;
+	/*float: right;*/
+	display: flex;
+	justify-content: space-between; 
+}
+/*.modalFormGuests_BtnGrp > *{
+	display: inline;
+}
+rd-btn-grp modal-form-guests__btn-grp
+*/
+
+.round-counter > .round-counter-text{
+	margin: 0;
+	padding: 6px 10px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.item-with-counter{
+	padding: 3px 0 3px 3px;
+	height: 35px;
+	display: flex;
+	justify-content: space-between; 
+}
+.item-with-counter h3{
+	padding: 6px 0;
+}
+
+
 /*2.2.2 end*/
+
+/*2.2.3 The form confirm/decline button styles*/
+.button-cd{
+	border: none;
+	background-color: #fff;
+	padding: 0;
+	color: rgba(31, 32, 65, 0.5);
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 15px;
+	text-transform: uppercase;
+
+}
+
+.button-cd:hover{
+	color: #bc9cff;
+}
+
+.button-bar{
+	padding: 9px 0 1px 3px;
+	height: 35px;
+	display: flex;
+	justify-content: space-between; 
+}
+/*2.2.3 end*/
+
+
 /*2.2.x old buttons styles*/
 .SubmitButton{
 	height: 45px;

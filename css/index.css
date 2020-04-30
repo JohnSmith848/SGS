@@ -76,7 +76,7 @@ in style.css
 	padding: 15px 0px 15px 0px;
 }	*/
 
-.modalFormDate{
+.modal-form-date{
 	display: none;
 	left: 170px;
 	top: 260px;
@@ -88,78 +88,61 @@ in style.css
 	background-color: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.5);
 	border-radius: 5px;
+	z-index:5;
 }
 
-.modalFormGuests{
+.modal-form-guests{
 	display: none;
 	left: 150px;
-	top: 322px;
+	top: 316px;
 	width: 360px;
 	height: 199px;	
 	background-image: url(../img/GuestsDrDnFrBg.svg);
 	position: absolute;
 	padding: 31px 31px;
+	z-index:5;
 	/*background-color: #fff;*/
 }
 
-.modalFormGuests > div{
+/*.modal-form-guests > .mfg__round-counter{
 	padding: 3px 0 3px 3px;
 	height: 35px;
 	display: flex;
 	justify-content: space-between; 
 }
 
-.modalFormGuests > div:last-child{
+.modal-form-guests > div:last-child{
 	padding: 9px 0 1px 3px;
-}
-
-.modalFormGuests h3{
-	padding: 6px 0;
-}
-
-.modalFormGuests_BtnGrp{
-	width:90px;
-	/*float: right;*/
-	display: flex;
-	justify-content: space-between; 
-}
-/*.modalFormGuests_BtnGrp > *{
-	display: inline;
 }*/
 
-.modalFormGuests_BtnGrp p{
-	margin: 0;
-	padding: 6px 10px;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 15px;
-}
 
-
-.modalFormGuests button{
+.modal-form-guests button{
 	outline-width: 0;
 }
 
-button[class$="P-Btn"]{
+button[class$="p-btn"]{
 	border-color: rgba(31, 32, 65, 0.25);
-	/*color: rgba(31, 32, 65, 0.25);*/
 }
 
-button[class$="P-Btn"]:hover{
+button[class$="p-btn"]:hover{
 	border-color: rgba(31, 32, 65, 0.5);
 	color: rgba(31, 32, 65, 0.5);
 }
 
-.M-Btn-active{
+.m-btn-active{
 	border-color: rgba(31, 32, 65, 0.25);
 }
 
-.M-Btn-active:hover{
+.m-btn-active:hover{
 	border-color: rgba(31, 32, 65, 0.5);
 	color: rgba(31, 32, 65, 0.5);
 }
 
-.modalFormGuests_Clean,
+.mfg__round-counter{ /*modal-form-guests__round-counter*/
+
+}
+
+/*.modalFormGuests_Clean,
 .modalFormGuests_Apply{
 	border: none;
 	background-color: #fff;
@@ -175,7 +158,7 @@ button[class$="P-Btn"]:hover{
 .modalFormGuests_Clean:hover,
 .modalFormGuests_Apply:hover{
 	color: #bc9cff;
-}
+}*/
 
 .modal-form_show{
 	display: block;
