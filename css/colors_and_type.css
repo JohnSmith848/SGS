@@ -1,0 +1,108 @@
+
+.body-container{
+	/*width:1440px;
+	margin: 0 auto;
+	border:1px solid #a1f100;*/
+	height:900px;
+}
+.main-contaner{
+	display:flex;
+	justify-content: space-between;
+	font-family: 'Quicksand';
+	margin:54px 0 0 0;
+}
+.main__colors{
+	width:270px;
+	margin: 0 0 0 259px;
+}
+.main__color-item{
+	display:flex;
+	justify-content: flex-start;
+	margin:0 0 20px 0;
+}
+.main__color-item-img{
+	width:70px;
+	height:70px;
+	border-radius:6px;
+	margin: 0 41px 0 0;
+}
+.main__color-item-caption{
+	font-size: 19px;
+	align-self: center;
+}
+.main__color-item-txt{
+	margin: 10px 0;
+}
+.main__color-item_ds100>.main__color-item-img{
+	background-color: rgba(31,32,65,1);
+}
+.main__color-item_ds075>.main__color-item-img{
+	background-color: rgba(31,32,65,0.75);
+}
+.main__color-item_ds050>.main__color-item-img{
+	background-color: rgba(31,32,65,0.5);
+}
+.main__color-item_ds025>.main__color-item-img{
+	background-color: rgba(31,32,65,0.25);
+}
+.main__color-item_ds005>.main__color-item-img{
+	background-color: rgba(31,32,65,0.05);
+}
+.main__color-item_prpl>.main__color-item-img{
+	background-color: #BC9CFF;
+}
+.main__color-item_grn>.main__color-item-img{
+	background-color: #6FCF97;
+}
+.main__type{
+	width:410px;
+	margin:0 83px 0 0;
+}
+.main__style{
+	display:flex;
+	justify-content: flex-end;
+	color: rgba(31,32,65,1);
+	margin:0 0 55px 0;
+}
+.main__style_h1{
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	height:60px;
+}
+.main__style_h2{
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 24px;
+	height:48px;
+}
+.main__style_h3{
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	height:15px;
+	text-transform: uppercase;
+}
+.main__style_body{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	height:48px;
+	color: rgba(31,32,65,0.75);
+}
+
+.main__style-desc{
+	width: 350px;
+	padding:0;
+}
+.main__style-name{
+	width:35px;
+	margin:0 35px 0 0;
+	font-weight: normal;
+	color: rgba(31,32,65,0.25);
+	text-align: right;
+}

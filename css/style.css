@@ -468,13 +468,15 @@ rd-btn-grp modal-form-guests__btn-grp
 /*2.4 end*/
 /*2 end*/
 
-/*3. Common header for all pages*/
-/**/
-
+/*3.0.1 Base classes for all pages*/
 .body-container{
 	width: 1440px;
 	margin: 0 auto;
 }
+/*3.0.1 end*/
+
+/*3.1.1 Common header for all site pages*/
+/**/
 
 .header{
 	/*for debug, later remove
@@ -548,8 +550,21 @@ rd-btn-grp modal-form-guests__btn-grp
 	For another localization words have to calculate the accordinly values of the padding
 	*//*
 }*/
+/*3.1.1 end*/
 
-/*Common footer for all pages*/
+
+/*3.1.2 Common header for all UI-kit pages*/
+/**/
+
+.header-ui{
+	width: 100%;
+}
+.header-ui__logo{
+	padding: 12px 0 12px 140px;/*left=140-15*/
+}
+/*3.1.2 end*/
+
+/*3.2.1 Common footer for all pages*/
 /**/
 
 .footer-body{
@@ -635,3 +650,4 @@ img[ class^="flag_"]{
 	display: inline-block;
 	padding: 0px 10px 0px 10px;
 }
+/*3.2.1 end*/
