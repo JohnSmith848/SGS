@@ -512,9 +512,9 @@ rd-btn-grp modal-form-guests__btn-grp
 }
 
 .header__item{
-  position:relative;
-  padding: 9px 15px;
-  color: rgba(31, 32, 65, 0.5);
+	position:relative;
+	padding: 9px 15px;
+	color: rgba(31, 32, 65, 0.5);
 }
 .header__item:hover{
 	color: rgba(31, 32, 65, 0.75);
@@ -535,7 +535,20 @@ rd-btn-grp modal-form-guests__btn-grp
 	border-radius: 17px;
 	width: 101px;
 }
+.header__item-info{
+	position:relative;
+	padding: 9px 15px;
+	color: rgba(31, 32, 65, 0.5);
+}
 
+.header__delimiter{
+	height:30px;
+	width:1px;
+	background-color: rgba(31, 32, 65, 0.5);
+}
+.header__full-name{
+
+}
 /*.header__list a{
 	padding: 10px 15px 10px 15px;
 }
@@ -573,6 +586,11 @@ rd-btn-grp modal-form-guests__btn-grp
 	display: flex;
 	justify-content: space-between; 
 }
+.footer-body-2{
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center;
+}
 /*.footer-container__body > div{
 	display: inline-block;
 
@@ -590,6 +608,12 @@ rd-btn-grp modal-form-guests__btn-grp
 	width: 260px; /*22.4%;*/
 	height: 373px;
 	padding: 90px 0 0 0;
+}
+.footer-body__logo-2{
+	padding:0;
+	width: 540px; 
+	height: 110px;
+	text-align: center;
 }
 
 .footer-body__nav{
@@ -645,7 +669,9 @@ img[ class^="flag_"]{
 .footer-sole__socials-list{
 	padding: 20px 115px 20px 0px;/*left=140-15-10*/
 }
-
+.footer-sole__socials-list-2{
+	padding-right:0;
+}
 .footer-sole__socials-list li{
 	display: inline-block;
 	padding: 0px 10px 0px 10px;
