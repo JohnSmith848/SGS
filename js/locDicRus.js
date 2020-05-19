@@ -35,7 +35,9 @@ const RussianDictionary={
 	Male: "Мужчина",
 	Female: "Женщина",
 	DateOfBirth: "Дата рождения",
-	GetSpecialOffers: "Получать спецпредложения"
+	GetSpecialOffers: "Получать спецпредложения",
+	TheNumberWhat: "Номера, которые мы для вас подобрали",
+
 }
 const GBBRussianDictionary={
 	Login: ["Войти", "87px"],
@@ -44,7 +46,7 @@ const GBBRussianDictionary={
 	GoToPayment: ["Перейти к оплате", "100%"],
 }
 const PlaceholderRussianDictionary={
-	dmy:{Default: "дд.мм.гггг"},
-	HowManyGests:{Default: "Сколько гостей"},
-	EMail:{Default: "Электронный адрес"},
+	dmy:["дд.мм.гггг"],
+	HowManyGuests:["Сколько гостей", "гость", "гостя", "гостей", "младенец", "младенца", "младенцев",],
+	EMail:["Электронный адрес"],
 }

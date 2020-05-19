@@ -3,14 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Toxin</title>
-		<meta name="viewport" content="width=device-width">
 		<!--link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet"-->
+	    <!--Plugin CSS file with desired skin for ion-rangeslider 2.3.1-->
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/plugins/datepicker.min.css">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/font-cur.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/search-room.css">    
 	</head>
 	<body class="body">
 		<div class="body__inner">
@@ -62,106 +63,64 @@
 				</div>
 			</header>
 			<main class="main">
-				<div class="main__inner" >
-					<form class="landing-form landing-form__repose">
-						<div>
-							<h1 data-loc="Text04" style="font-fmily: Quicksand">We'll find a numbers for your desires</h1>
-						</div>
-						<div class="lf-double-dates-group">
+				<div class="main__inner">
+					<aside class="main__aside-search">
+						<form class="search-form">
 							<div class="named-field">
-								<h3 data-loc="Arrival">Arrival</h3>
+								<h3 data-loc="Hotel_sBeingDates">hotel's being dates</h3>
 								<div class="dropdown-field">
-									<input class="text-field lf__arrival-field" type="text" name="arrival" placeholder="dd.mm.yyyy" data-loc-ph="dmy">
+									<input class="text-field" type="text" name="dates" placeholder="19 авг - 23 авг" data-loc-ph="">
 								</div>
 							</div>
-							<div  class="named-field">
-								<h3 data-loc="Departure">Departure</h3>
+							<div class="named-field">
+								<h3 data-loc="Guests">Guests</h3>
 								<div class="dropdown-field">
-									<input class="text-field lf__departure-field" type="text" name="departure" placeholder="dd.mm.yyyy" data-loc-ph="dmy">
+									<input class="text-field" type="text" name="dates" placeholder="3 гостя, 1 младенец" data-loc-ph="">
 								</div>
 							</div>
-						</div>
-						<div class="named-field guests-nf__lf-rep">
-							<h3 data-loc="Guests">Guests</h3>
-							<div class="dropdown-field">
-								<input class="text-field lf__guests-field" type="text" name="guests" placeholder="How many gests" data-loc-ph="HowManyGuests">
+							<div class="double-range-slider">
+								<div class="drs__header">
+									<h3 class="h3 main-forms-srch-h3" data-loc="RangePrice">Range price</h3>
+									<p class="drs__value-grp">
+										<span class="drs__value-from" data-loc="">5000</span>
+										<span data-loc=""> - </span>
+										<span class="drs__value-to" data-loc="">10000</span><!--&#8399-->
+									</p>
+								</div>
+								<input class="text-field js-range-slider" type="text" name="Prices">
+								<span class="drs__subscription" data-loc="ThePriceForBeing">The price for being in the number by day</span>
 							</div>
+						</form>
+					</aside>
+					<section class="main__masonry-result">
+						<h1 data-loc="TheNumberWhat"> The numbers, what we have found you</h1>
+						<div class="main__searched-room-grid">
+							
 						</div>
-						<div class="gradient-btn gradient-btn_arrowed submit-bt__lf-rep">
+						<div class="main__paging">
+							
+						</div>
+					</section>
+					<!--form class="main-form-log">
+						<h1 class="main-forms-h1" data-loc="Login" style="font-fmily: Quicksand">Login</h1>
+						<input class="text-field main-form-log__text-field" type="text" name="login" placeholder="Email" data-loc-ph="Email">
+						<input class="text-field main-form-log__text-field" type="text" name="password" placeholder="Password" data-loc-ph="Password">
+						<div class="gradient-btn gradient-btn_arrowed main-form-log__submit-btn">
 							<input class="gradient-btn__btn" type="button" name="grd-btn">
 							<div class="gradient-btn__render">
-								<a class="gradient-btn__text gradient-btn__text_def" href="#" data-loc-gbb="SelectNumber">Select Number</a>
+								<a class="gradient-btn__text gradient-btn__text_def" href="#" data-loc="Login">Login</a>
 							</div>
 						</div>
-					</form>
-					<form class="qimf qimf__guests">
-						<div class="item-with-counter qimf-g__item-with-counter">
-							<h3 data-loc="Adults">Adults</h3>
-							<div class="round-counter qimf-g__round-counter">
-								<button class="round-button qimf-g__adults-m-btn">-</button>
-								<p class="round-counter-text qimf-g__adults">0</p>
-								<button class="round-button qimf-g__adults-p-btn">+</button>
+						<div class="main-form-log__txt-btn-group">
+							<span class="main-form-log__txt-in-group" data-loc="Text06">Have you not Toxin's account?</span>
+							<div class="gradient-btn main-form-log__register-btn">
+								<input class="gradient-btn__btn" type="button" name="grd-btn">
+								<div class="gradient-btn__render">
+									<a class="gradient-btn__text gradient-btn__text_def" href="">Register</a>
+								</div>
 							</div>
 						</div>
-						<div class="item-with-counter qimf-g__item-with-counter">
-							<h3 data-loc="Children">Children</h3>
-							<div class="round-counter qimf-g__round-counter">
-								<button class="round-button qimf-g__children-m-btn">-</button>
-								<p class="round-counter-text qimf-g__children">0</p>
-								<button class="round-button qimf-g__children-p-btn">+</button>
-							</div>
-						</div>
-						<div class="item-with-counter qimf-g__item-with-counter">
-							<h3 data-loc="BabiesInArms">Babies in arms</h3>
-							<div class="round-counter qimf-g__round-counter">
-								<button class="round-button qimf-g__babies-in-arms-m-btn">-</button>
-								<p class="round-counter-text qimf-g__babies-in-arms">0</p>
-								<button class="round-button qimf-g__babies-in-arms-p-btn">+</button>
-							</div>
-						</div>
-						<div class="button-bar qimf-g__button-bar">
-							<button class="button-cd qimf-g__btn-clean" data-loc="Clean">Clean</button>
-							<button class="button-cd qimf-g__btn-apply" data-loc="Apply">Apply</button>
-						</div>
-					</form>
-					<div class="main__form-wrapper">
-					<form class="dimf dimf__arr-dep">
-						<!--div>
-							<button class="modalFormDate_Arrow2Left"></button>
-							<h1 data-loc="CurrentDate">CurrentDate</h3>
-							<button class="modalFormDate_Arrow2Right"></button>
-						</div>
-						<div class="modalFormDate_DateTable">
-						</div-->
-						<div class="datepicker-here datepickerArrDep"></div>
-						<div class="button-bar dimf-ad__button-bar">
-							<button class="button-cd dimf-ad__btn-clean" data-loc="Clean">Clean</button>
-							<button class="button-cd dimf-ad__btn-apply" data-loc="Apply">Apply</button>
-						</div>
-					</form>
-					</div>
-					<div class="main__flex-gap-greeder"></div>
-					<div class="main__pager">
-						<div class="radio-btn main__pager-rbtn">
-							<input class="radio-btn__check-box" type="radio" name="Pager" id="rbPage1" checked onclick="document.querySelector('.body-inner').style['background-image']='url(./img/Bg_Room_1ct.png)';">
-							<label class="radio-btn__label" for="rbPage1">
-								<span class="radio-btn__render"></span>
-							</label>
-						</div>					
-						<div class="radio-btn main__pager-rbtn">
-							<input class="radio-btn__check-box" type="radio" name="Pager" id="rbPage2" onclick="document.querySelector('.body-inner').style['background-image']='url(./img/Bg_Room_2ct.png)';">
-							<label class="radio-btn__label" for="rbPage2">
-								<span class="radio-btn__render"></span>
-							</label>
-						</div>					
-						<div class="radio-btn main__pager-rbtn">
-							<input class="radio-btn__check-box" type="radio" name="Pager" id="rbPage3" onclick="document.querySelector('.body-inner').style['background-image']='url(./img/Bg_Room_3ct.png)';">
-							<label class="radio-btn__label" for="rbPage3">
-								<span class="radio-btn__render"></span>
-							</label>
-						</div>					
-					</div>
-					<div class="main__signature" data-loc="Text01">The best numbers for your work,<br> rest and just inspiration</div>
+					</form-->
 				</div>
 			</main>
 			<footer>
@@ -236,12 +195,13 @@
 			</footer>
 		</div>
 	<!--jQuery-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
-	<script src="js/plugins/datepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!--Plugin JavaScript file-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/localize.js"></script>
 	<script src="js/locDicRus.js"></script>
 	<script src="js/locDicEng.js"></script>
-	<script src="js/localize.js"></script>
-	<script src="js/common.js"></script>
-	<script src="js/index.js"></script>
+	<script src="js/search-room.js"></script>
 	</body>
 </html>

@@ -35,7 +35,8 @@ const EnglishDictionary={
 	Male: "Male",
 	Female: "Female",
 	DateOfBirth: "DateOfBirth",
-	GetSpecialOffers: "Get Special Offers"
+	GetSpecialOffers: "Get Special Offers",
+	TheNumberWhat: "The numbers, what we have found you",
 }
 const GBBEnglishDictionary={
 	Login: ["Login", "79px"],
@@ -44,7 +45,7 @@ const GBBEnglishDictionary={
 	GoToPayment: ["Go to payment", "100%"],
 }
 const PlaceholderEnglishDictionary={
-	dmy:{Default: "dd.mm.yyyy"},
-	HowManyGests:{Default: "How many gests"},
-	EMail:{Default: "Email"},
+	dmy:["dd.mm.yyyy"],
+	HowManyGuests:["How many guests", "guest", "guests", "baby in arms", "babies in arms",],
+	EMail:["Email"],
 }

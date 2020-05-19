@@ -1,0 +1,30 @@
+.body__inner{
+	/*background-image: url(../img/Bg_Room_1ct.png);
+	background-size: 1440px 900px;
+	background-repeat: no-repeat;*/
+}
+.main{
+	height:1355px;
+}
+.main__inner{
+	display:flex;
+	justify-content:space-between;
+}
+.main__aside-search{
+
+}
+.search-form{
+	width:266px;
+	/*background-color: #ccddff;*/
+}
+
+.main__masonry-result{
+	width:834px;
+	background-color: #ffeecc;
+}
+
+.main__searched-room-grid{
+}
+.main__paging{
+
+}

@@ -1,3 +1,32 @@
+// the header submenu elements
+const servicesLinksGroup = document.querySelector('#ServicesLinksGroup');
+const servicesSubmenu = document.querySelector('#ServicesSubmenu');
+const documentationLinksGroup = document.querySelector('#DocumentationLinksGroup');
+const documentationSubmenu = document.querySelector('#DocumentationSubmenu');
+
+// the Services item (in the header menu) click processing
+servicesLinksGroup.addEventListener(
+	'click',
+	function(evt){
+		evt.preventDefault();
+		// Enter code to initialize the value of guests form controls
+		servicesSubmenu.classList.toggle('header__list2_show');
+		servicesLinksGroup.classList.toggle('header__link_dd-click');
+		
+	}
+)
+
+// the Documentation item (in the header menu) click processing
+documentationLinksGroup.addEventListener(
+	'click',
+	function(evt){
+		evt.preventDefault();
+		// Enter code to initialize the value of guests form controls
+		documentationSubmenu.classList.toggle('header__list2_show');
+		documentationLinksGroup.classList.toggle('header__link_dd-click');
+	}
+)
+
 function createHTMLMonth(elem, year, month){
 	let m='';//result HTML string
 	let r=1, i=1, n=1;//the days counts: rest last month, current month, and next month

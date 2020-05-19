@@ -1,187 +1,102 @@
-.body-container{
+.body__inner{
 	background-image: url(../img/Bg_Room_1ct.png);
 	background-size: 1440px 900px;
 	background-repeat: no-repeat;
 }
 
-.main-container-out{
-	/*max-width: 1440px;*/
+.main{
 	height: 830px;
 }
-.main{
-	height: 100%;
-	position: relative;
+
+.main__inner{
+	display:flex;
+	justify-content:flex-end;
+	align-items:flex-end;
+	flex-direction:column;
 }
-/*.main-container_main-form{
-	/*border: 1px solid #000;
 
-}*/
-
-.main-form-ind{
+/*main form adoptation classes*/
+.landing-form{
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	border-radius: 5px;
-	padding: 39px 29px 39px 29px;
+	padding: 39px 29px 30px 29px;
 	background-color: #fff;
-	position: absolute;
-	left: 140px;
-	top: 70px;
-	width: 379px;
+	width: 380px;
 	height: 375px;
 }
-.main-form-ind__dates{
+.landing-form__repose{
+	margin-top:70px;
+	align-self:flex-start;
+}
+.lf-double-dates-group{
 	margin:22px 0 0 0;
 }
-.main-form-ind__guests{
+.lf-double-dates-group>.named-field{
+	display: inline-block;
+	width:152px;
+}
+.lf-double-dates-group .named-field+.named-field{
+	margin-left:11px;
+}
+
+.guests-nf__lf-rep{ /*guests-named-field__landing-form-reposition*/
 	margin:16px 0 0 0;
 }
-.main-form-ind__dates div{
-	display: inline-block;
-}
-.main-form-ind__submit{
+
+.submit-bt__lf-rep{
 	margin:25px 0 0 0;
 	height:45px;
 }
-.main-form-ind__dd-txt-fld{
-	margin: 5px 0;
-}
-/*.mainForm h3{
-	padding: 5px 0 5px 0;	
-}
-.mainForm > div{
-	padding: 15px 0 0 0;	
-}
-in style.css
-.mainForm__SubmitBtn{
-	height: 45px;
-	font-weight: bold;  
-	font-size: 12px;
-	text-transform: uppercase;
-	text-align: center;
-	margin-top: 10px; 
-	background-image: url(../img/Bg_btn_SelectNumber.png);
-	background-size: 100% 45px;
-	background-position: 0;
-	background-repeat: no-repeat;
-	background-clip: border-box;
-	color: white;
-}	
 
-.mainForm__SubmitBtn:hover{
-	background-image: url(../img/Bg_btn_SelectNumber_hover.png);
-	color: #bc9cff;
-}
-
-.mainForm__SubmitBtn a{
-	color: inherit;
-	padding: 15px 0px 15px 0px;
-}	*/
-
-.modal-form-date{
-	display: none;
-	left: 170px;
-	top: 260px;
-	width: 320px;
-	height: 369px;
-	/*background-image: url(../img/GuestsDrDnFrBg.svg);*/
-	position: absolute;
-	padding: 31px 31px;
-	background-color: #fff;
-	border: 1px solid rgba(0, 0, 0, 0.5);
-	border-radius: 5px;
-	z-index:5;
-}
-
-.modal-form-guests{
-	display: none;
-	left: 150px;
-	top: 316px;
-	width: 360px;
-	height: 199px;	
+/*the guests modal form adoptation classes*/
+.qimf__guests{
+	/* modal-form-guests
+	background-color: #fff;*/
+	/*display:none;
 	background-image: url(../img/GuestsDrDnFrBg.svg);
-	position: absolute;
-	padding: 31px 31px;
+	padding:31px 31px;
+	width:360px;
+	height:199px;
+	position:relative;*/
+	left:10px;
+	top:-130px;
+	align-self:flex-start;
 	z-index:5;
-	/*background-color: #fff;*/
 }
 
-/*.modal-form-guests > .mfg__round-counter{
-	padding: 3px 0 3px 3px;
-	height: 35px;
-	display: flex;
-	justify-content: space-between; 
+/*the arrival-departure dates modal form adoptation classes*/
+.main__form-wrapper{
+	/*This crutch need to squeeze too very big dataPicker's form to parent flex contaner*/
+	position:relative;
+	align-self:flex-start;
+}
+.dimf__arr-dep{
+	position:absolute;
+	left: 29px;
+	top: -186px;
+	z-index:5;
 }
 
-.modal-form-guests > div:last-child{
-	padding: 9px 0 1px 3px;
-}*/
-
-
-.modal-form-guests button{
-	outline-width: 0;
+.main__flex-gap-greeder{
+	width:100%;
+	flex-grow:1;
+	flex-shrink:1;
+}
+.main__pager{
+	opacity:0;
+	transition:opacity 1s;
+}
+.main__pager:hover{
+	opacity:1;
+	transition:opacity 1s;
 }
 
-button[class$="p-btn"]{
-	border-color: rgba(31, 32, 65, 0.25);
-}
-
-button[class$="p-btn"]:hover{
-	border-color: rgba(31, 32, 65, 0.5);
-	color: rgba(31, 32, 65, 0.5);
-}
-
-.m-btn-active{
-	border-color: rgba(31, 32, 65, 0.25);
-}
-
-.m-btn-active:hover{
-	border-color: rgba(31, 32, 65, 0.5);
-	color: rgba(31, 32, 65, 0.5);
-}
-
-.mfg__round-counter{ /*modal-form-guests__round-counter*/
-
-}
-
-/*.modalFormGuests_Clean,
-.modalFormGuests_Apply{
-	border: none;
-	background-color: #fff;
-	padding: 0;
-	color: rgba(31, 32, 65, 0.5);
-	font-size: 12px;
-	font-weight: bold;
-	line-height: 15px;
-	text-transform: uppercase;
-
-}
-
-.modalFormGuests_Clean:hover,
-.modalFormGuests_Apply:hover{
-	color: #bc9cff;
-}*/
-
-.modal-form_show{
-	display: block;
-}
-.main-container-in{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-	flex-direction: column;
-}
-
-.main-container-in__pager{
-	padding: 0 140px 0 0; 
-}
-
-.main-container-in__rbtn-pager{
+.main__pager-rbtn{
 	padding: 0 0 0 25px;
 	min-height: 25px;
 }
-.main-container-in__signature{
-	padding: 0 140px 29px 0; 
+.main__signature{
+	padding: 0 0 29px 0; 
 	color: rgba(31, 32, 65, 0.75);
 	line-height: 24px;
 	text-align: right;
