@@ -3,13 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Toxin</title>
-		<!--link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet"-->
-	    <!--Plugin CSS file with desired skin for ion-rangeslider 2.3.1-->
-    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!--Off-line Air datapicker classes-->
+		<link rel="stylesheet" type="text/css" href="css/plugins/datepicker.min.css">
+		<!--Plugin CSS file with desired skin for ion-rangeslider 2.3.1-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+		<!--Off-line Ion Range Slider classes-->
+		<link rel="stylesheet" href="css/plugins/ion.rangeSlider.min.css"/>
+		<!--Off-line Slick Slider classes-->
+		<link rel="stylesheet" href="css/plugins/slick.css"/>
+
+		<!--On-line text fonts.-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap">
+		<!--Off-line text fonts.-->
+		<link rel="stylesheet" type="text/css" href="css/fonts-off-line.css">
+
+		<!--Uncompleted icon fonts. Get rid of a dependencies and remove/-->
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
-		<link rel="stylesheet" type="text/css" href="css/font-cur.css">
+		<!--link rel="stylesheet" type="text/css" href="css/font-cur.css"-->
+		<!--Completed icon font-->
+		<link rel="stylesheet" type="text/css" href="css/icon-fonts.css">
+
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/search-room.css">    
 	</head>
@@ -19,150 +33,875 @@
 				<div class="header__inner">
 					<div class="header__logo">
 						<a href="#">
-							<img src="img/logo_Toxin.png" alt="logo">
+							<img src="img/logo-toxin.png" alt="logo">
 						</a>
 					</div>
-					<nav class="header__menu">
+					<div class="header__gap"></div>
+					<nav class="header__menu header__menu-list">
 						<ul class="header__list">
-							<li class="header__item"><a class="header__link" href="#" data-loc="Home">Home</a></li>
-							<li class="header__item"><a class="header__link" href="#" data-loc="AboutUs">About Us</a></li>
-							<li class="header__item"><a class="header__link header__link_dd" id="ServicesLinksGroup" href="#" data-loc="Services">Services</a>
-								<ul class="header__list2" id="ServicesSubmenu">
-									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service1">Service 1</a></li>
-									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service2">Service 2</a></li>
-									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service3">Service 3</a></li>
+							<!--DELETE for matching of the landing design>
+							<li class="header__item"><a class="header__link" href="#" data-loc="Home">На главную</a></li>
+							<END_DELETE-->
+							<li class="header__item"><a class="header__link" href="#" data-loc="AboutUs">О Нас</a></li>
+							<li class="header__item">
+								<input class="header__dd-item-chackbox" type="checkbox" id="MenuIDServices">
+								<label class="header__link header__dd-item-label" for="MenuIDServices" href="#" data-loc="Services">Услуги</label>
+								<ul class="header__list2">
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service1">Услугa 1</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service2">Услугa 2</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service3">Услугa 3</a></li>
 								</ul>
 							</li>
-							<li class="header__item"><a class="header__link" href="#" data-loc="Careers">Careers</a></li>
-							<li class="header__item"><a class="header__link" href="#" data-loc="News">News</a></li>
-							<li class="header__item"><a class="header__link header__link_dd" id="DocumentationLinksGroup"  href="#" data-loc="Doc">Documentation</a>
-								<ul class="header__list2" id="DocumentationSubmenu">
-									<li class="header__item2"><a class="header__link2" href="#" data-loc="Document1">Document 1</a></li>
-									<li class="header__item2"><a class="header__link2" href="#" data-loc="Document2">Document 2</a></li>
-									<li class="header__item2"><a class="header__link2" href="#" data-loc="Document3">Document 3</a></li>
-									<li class="header__item2"><a class="header__link2" href="#" data-loc="Document4">Document 4</a></li>
-									<li class="header__item2"><a class="header__link2" href="#" data-loc="Document5">Document 5</a></li>
+							<li class="header__item"><a class="header__link" href="#" data-loc="Careers">Вакансии</a></li>
+							<li class="header__item"><a class="header__link" href="#" data-loc="News">Новости</a></li>
+							<li class="header__item">
+								<input class="header__dd-item-chackbox" type="checkbox" id="MenuIDDocumentation">
+								<label class="header__link header__dd-item-label" for="MenuIDDocumentation" href="#" data-loc="Doc">Соглашения</label>
+								<ul class="header__list2">
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc1">Соглашение 1</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc2">Соглашение 2</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc3">Соглашение 3</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc4">Соглашение 4</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc5">Соглашение 5</a></li>
 								</ul>
 							</li>
-							<li class="header__item header__item_btn">
-								<div class="gradient-btn header__item-btn-log">
-									<div class="gradient-btn__render">
-										<a class="gradient-btn__text gradient-btn__text_def" href="./login.html" data-loc-gbb="Login">Login</a>
-									</div>
-								</div>
-							</li>
-							<li class="header__item header__item_btn">
-								<div class="gradient-btn header__item-btn-reg">
-									<div class="gradient-btn__render">
-										<a class="gradient-btn__text gradient-btn__text_def" href="./register.html" data-loc-gbb="Register">Register</a>
-									</div>
-								</div>
-							</li>	
 						</ul>
 					</nav>
+					<nav class="header__menu header__menu-btns">
+						<ul class="header__list">
+							<li class="header__item header__item_btn">
+								<div class="gradient-btn hovered header__item-btn_log">
+									<div class="gradient-btn__render">
+										<a class="gradient-btn__text gradient-btn__text_def" href="./login.html" data-loc-gbb="Login">Войти</a>
+									</div>
+								</div>
+							</li>
+							<li class="header__item header__item_btn">
+								<div class="gradient-btn header__item-btn_reg">
+									<div class="gradient-btn__render">
+										<a class="gradient-btn__text gradient-btn__text_def" href="./register.html" data-loc-gbb="Register">Зарегистрироваться</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__menu-mobile">
+						<div class="header__menu-burger"><span></span></div>
+					</div>
 				</div>
 			</header>
 			<main class="main">
 				<div class="main__inner">
 					<aside class="main__aside-search">
 						<form class="search-form">
-							<div class="named-field">
-								<h3 data-loc="Hotel_sBeingDates">hotel's being dates</h3>
+							<div class="named-field srch-frm__being-dates_rep">
+								<h3 data-loc="Hotel_sBeingDates">Даты пребывания в отеле</h3>
 								<div class="dropdown-field">
-									<input class="text-field" type="text" name="dates" placeholder="19 авг - 23 авг" data-loc-ph="">
+									<input class="text-field sf__being-dates-text-field" type="text" name="dates" placeholder="dd.mm.yyyy - dd.mm.yyyy" value="19 авг - 23 авг" data-loc-ph="dmy2">
 								</div>
 							</div>
-							<div class="named-field">
-								<h3 data-loc="Guests">Guests</h3>
+							<div class="named-field srch-frm__guests_rep">
+								<h3 data-loc="Guests">Гости</h3>
 								<div class="dropdown-field">
-									<input class="text-field" type="text" name="dates" placeholder="3 гостя, 1 младенец" data-loc-ph="">
+									<input class="text-field sf__guests-text-field" type="text" name="dates" placeholder="HowManyGuests" value="3 гостя, 1 младенец" data-loc-ph="">
 								</div>
 							</div>
-							<div class="double-range-slider">
+							<div class="double-range-slider srch-frm__range-price_rep">
 								<div class="drs__header">
-									<h3 class="h3 main-forms-srch-h3" data-loc="RangePrice">Range price</h3>
+									<h3 data-loc="RangePrice">Диапазон цены</h3>
 									<p class="drs__value-grp">
-										<span class="drs__value-from" data-loc="">5000</span>
-										<span data-loc=""> - </span>
-										<span class="drs__value-to" data-loc="">10000</span><!--&#8399-->
+										<span class="drs__value-from">5000</span>
+										<span> - </span>
+										<span class="drs__value-to">10000</span><!--&#8399-->
 									</p>
 								</div>
 								<input class="text-field js-range-slider" type="text" name="Prices">
-								<span class="drs__subscription" data-loc="ThePriceForBeing">The price for being in the number by day</span>
+								<span class="drs__subscription" data-loc="ThePriceForBeing">Стоимость за сутки пребывания в номере</span>
+							</div>
+							<div class="checkbox-group srch-frm__improvements_rep">
+								<h3 class="checkbox-group__h3" data-loc="Improvements">Checkbox buttons</h3>
+								<div class="checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="MaySmoke" disabled>
+									<label class="checkbox-btn__label" for="MaySmoke">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="MaySmoke">Можно курить</div>										
+									</label>
+								</div>
+								<div class="checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="MayBeWithPets" checked>
+									<label class="checkbox-btn__label" for="MayBeWithPets">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="MayBeWithPets">Можно с питомцами</div>
+									</label>
+								</div>
+								<div class="checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="MayInviteGuests" checked>
+									<label class="checkbox-btn__label" for="MayInviteGuests">
+										<div class="checkbox-btn__render"></div>
+										<p class="checkbox-btn__text" data-loc="Text07">Можно пригласить гостей <br> (до 10 человек)</p>
+									</label>
+								</div>
+							</div>
+							<div class="checkbox-group srch-frm__accessibility_rep">
+								<h3 class="checkbox-group__h3" data-loc="Accessibility">Доступность</h3>
+								<div class="checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="BroadPassage" disabled>
+									<label class="checkbox-btn__label" for="BroadPassage">
+										<div class="checkbox-btn__render"></div>
+										<h4 class="checkbox-btn__header" data-loc="BroadPassage">Широкий коридор </h4>
+										<p class="checkbox-btn__small-text" data-loc="Text08">Ширина коридоров в номере не менее 91 см.</p>
+									</label>
+								</div>
+								<div class="checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="HelperService" disabled>
+									<label class="checkbox-btn__label" for="HelperService">
+										<div class="checkbox-btn__render"></div>
+										<h4 class="checkbox-btn__header" data-loc="HelperService">Помощник для инвалидов </h4>
+										<p class="checkbox-btn__small-text" data-loc="Text09">На 1 этаже вас встретит специалист и проводит до номера.</p>
+									</label>
+								</div>
+							</div>
+							<div class="named-field srch-frm__number-improvements_rep">
+								<h3 data-loc="NumberImprovements">Удобства номера</h3>
+								<div class="dropdown-field">
+									<input class="text-field sf__number-improvments-text-field" type="text" name="NumberImprovements" placeholder="Improvements", value="2 спальни, 2 кровати..." data-loc-ph="">
+								</div>
+							</div>
+							<div class="expanded-checkbox-group srch-frm__auxiliary-improvements_rep">
+								<input class="checkbox-grp__check-box" type="checkbox" id="AuxiliaryImprovements">
+								<label class="checkbox-grp__label" for="AuxiliaryImprovements">
+									<h3 class="expanded-checkbox-group__h3" data-loc="AuxiliaryImprovements">Дополнительные удобства</h3>
+								</label>
+								<div class="checkbox-btn expanded-checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="Breakfast" disabled>
+									<label class="checkbox-btn__label" for="Breakfast">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="Breakfast">Завтрак</div>										
+									</label>
+								</div>
+								<div class="checkbox-btn expanded-checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="WritingTable" checked>
+									<label class="checkbox-btn__label" for="WritingTable">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="WritingTable">Письменный стол</div>
+									</label>
+								</div>
+								<div class="checkbox-btn expanded-checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="BreastfeedingChair" checked>
+									<label class="checkbox-btn__label" for="BreastfeedingChair">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="BreastfeedingChair">Стул для кормления</div>
+									</label>
+								</div>
+								<div class="checkbox-btn expanded-checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="Cot" checked>
+									<label class="checkbox-btn__label" for="Cot">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="Cot">Кроватка</div>
+									</label>
+								</div>
+								<div class="checkbox-btn expanded-checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="Television1" disabled>
+									<label class="checkbox-btn__label" for="Television1">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="Television">Телевизор</div>
+									</label>
+								</div>
+								<div class="checkbox-btn expanded-checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="Shampoo1" disabled>
+									<label class="checkbox-btn__label" for="Shampoo1">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="Shampoo">Шампунь</div>
+									</label>
+								</div>
+								<div class="checkbox-btn expanded-checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="Television2" disabled>
+									<label class="checkbox-btn__label" for="Television2">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="Television">Телевизор</div>
+									</label>
+								</div>
+								<div class="checkbox-btn expanded-checkbox-btn">
+									<input class="checkbox-btn__check-box" type="checkbox" id="Shampoo2" disabled>
+									<label class="checkbox-btn__label" for="Shampoo2">
+										<div class="checkbox-btn__render"></div>
+										<div class="checkbox-btn__text" data-loc="Shampoo">Шампунь</div>
+									</label>
+								</div>
+							</div>
+						</form>
+						<form class="dimf dimf__arr-dep srch-frm__dimf-arr-dep_rep">
+							<div class="datepicker-here datepicker_arr-dep"></div>
+							<div class="button-bar dimf-ad__button-bar">
+								<button class="button-cd dimf-ad__btn-clean" data-loc="Clean">Clean</button>
+								<button class="button-cd dimf-ad__btn-apply" data-loc="Apply">Apply</button>
+							</div>
+						</form>
+						<form class="qimf qimf_guests srch-frm__qimf-guests_rep">
+							<div class="item-with-counter qimf-g__item-with-counter">
+								<h3 data-loc="Adults">Adults</h3>
+								<div class="round-counter qimf-g__round-counter">
+									<button class="round-button-m qimf-g__adults-m-btn"></button>
+									<p class="round-counter-text qimf-g__adults">0</p>
+									<button class="round-button-p qimf-g__adults-p-btn"></button>
+								</div>
+							</div>
+							<div class="item-with-counter qimf-g__item-with-counter">
+								<h3 data-loc="Children">Children</h3>
+								<div class="round-counter qimf-g__round-counter">
+									<button class="round-button-m qimf-g__children-m-btn"></button>
+									<p class="round-counter-text qimf-g__children">0</p>
+									<button class="round-button-p qimf-g__children-p-btn"></button>
+								</div>
+							</div>
+							<div class="item-with-counter qimf-g__item-with-counter">
+								<h3 data-loc="BabiesInArms">Babies in arms</h3>
+								<div class="round-counter qimf-g__round-counter">
+									<button class="round-button-m qimf-g__babies-in-arms-m-btn"></button>
+									<p class="round-counter-text qimf-g__babies-in-arms">0</p>
+									<button class="round-button-p qimf-g__babies-in-arms-p-btn"></button>
+								</div>
+							</div>
+							<div class="button-bar qimf-g__button-bar">
+								<button class="button-cd qimf-g__btn-clean" data-loc="Clean">Clean</button>
+								<button class="button-cd qimf-g__btn-apply" data-loc="Apply">Apply</button>
+							</div>
+						</form>
+						<form class="qimf qimf_number-improvements srch-frm__qimf-number-improvements_rep srch-frm__qimf-number-improvements_rep-rus">
+							<div class="item-with-counter qimf-ni__item-with-counter">
+								<h3 data-loc="Bedrooms">Спальни</h3>
+								<div class="round-counter qimf-ni__round-counter">
+									<button class="round-button-m qimf-ni__bedrooms-m-btn"></button>
+									<p class="round-counter-text qimf-ni__bedrooms">0</p>
+									<button class="round-button-p qimf-ni__bedrooms-p-btn"></button>
+								</div>
+							</div>
+							<div class="item-with-counter qimf-ni__item-with-counter">
+								<h3 data-loc="Beds">Кровати</h3>
+								<div class="round-counter qimf-ni__round-counter">
+									<button class="round-button-m qimf-ni__beds-m-btn"></button>
+									<p class="round-counter-text qimf-ni__beds">0</p>
+									<button class="round-button-p qimf-ni__beds-p-btn"></button>
+								</div>
+							</div>
+							<div class="item-with-counter qimf-ni__item-with-counter">
+								<h3 data-loc="Bathrooms">Ванные комнаты</h3>
+								<div class="round-counter qimf-ni__round-counter">
+									<button class="round-button-m qimf-ni__bathrooms-m-btn"></button>
+									<p class="round-counter-text qimf-ni__bathrooms">0</p>
+									<button class="round-button-p qimf-ni__bathrooms-p-btn"></button>
+								</div>
+							</div>
+							<div class="button-bar qimf-ni__button-bar">
+								<button class="button-cd qimf-ni__btn-clean" data-loc="Clean">Clean</button>
+								<button class="button-cd qimf-ni__btn-apply" data-loc="Apply">Apply</button>
 							</div>
 						</form>
 					</aside>
 					<section class="main__masonry-result">
-						<h1 data-loc="TheNumberWhat"> The numbers, what we have found you</h1>
-						<div class="main__searched-room-grid">
-							
+						<h1 class="main__masonry-result-h1_rep" data-loc="TheNumberWhat">Номера, которые мы для вас подобрали</h1>
+						<div class="main__searched-rooms-grid">
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-01-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-01-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-01-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-01-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#" class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<!--div class="numb-prev__desc-numb-sign">№</div-->
+										<div class="numb-prev__desc-numb numb-prev__desc-numb_lux-ru" data-loc-ps="Lux">888 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">9990</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<!--div class="numb-prev__desc-line"></div-->
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating" aria-label="not so hot" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating" aria-label="good" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating" aria-label="luxury" disabled checked>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">145 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-02-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-02-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-02-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-02-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#"  class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">840 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">9900</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating2" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating2" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating2" aria-label="not so hot" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating2" aria-label="good" disabled checked>
+											<input class="numb-prev__desc-star" type="radio" name="rating2" aria-label="luxury" disabled>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">65 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-03-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-03-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-03-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-03-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#"  class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb numb-prev__desc-numb_lux-ru" data-loc-ps="Lux">980 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">8500</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating3" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating3" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating3" aria-label="not so hot" disabled checked>
+											<input class="numb-prev__desc-star" type="radio" name="rating3" aria-label="good" disabled >
+											<input class="numb-prev__desc-star" type="radio" name="rating3" aria-label="luxury" disabled>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">35 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-04-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-04-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-04-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-04-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#"  class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">856 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">7300</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating4" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating4" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating4" aria-label="not so hot" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating4" aria-label="good" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating4" aria-label="luxury" disabled checked>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">19 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-05-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-05-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-05-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-05-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#"  class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">740 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">6000</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating5" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating5" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating5" aria-label="not so hot" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating5" aria-label="good" disabled checked>
+											<input class="numb-prev__desc-star" type="radio" name="rating5" aria-label="luxury" disabled>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">44 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-06-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-06-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-06-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-06-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#" class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">982 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">5800</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating6" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating6" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating6" aria-label="not so hot" disabled checked>
+											<input class="numb-prev__desc-star" type="radio" name="rating6" aria-label="good" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating6" aria-label="luxury" disabled>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">56 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-07-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-07-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-07-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-07-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#" class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">678 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">5500</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating7" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating7" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating7" aria-label="not so hot" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating7" aria-label="good" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating7" aria-label="luxury" disabled checked>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">45 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-08-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-08-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-08-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-08-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#" class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">450 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">5300</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating8" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating8" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating8" aria-label="not so hot" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating8" aria-label="good" disabled checked>
+											<input class="numb-prev__desc-star" type="radio" name="rating8" aria-label="luxury" disabled>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">39 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-09-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-09-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-09-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-09-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#" class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">350 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">5000</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating9" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating9" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating9" aria-label="not so hot" disabled checked>
+											<input class="numb-prev__desc-star" type="radio" name="rating9" aria-label="good" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating9" aria-label="luxury" disabled>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">77 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-10-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-10-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-10-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-10-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#" class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">666 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">5000</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating10" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating10" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating10" aria-label="not so hot" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating10" aria-label="good" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating10" aria-label="luxury" disabled checked>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">25 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-11-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-11-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-11-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-11-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#" class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">444 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">5000</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating11" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating11" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating11" aria-label="not so hot" disabled checked>
+											<input class="numb-prev__desc-star" type="radio" name="rating11" aria-label="good" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating11" aria-label="luxury" disabled>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">15 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
+							<article class="number-preview">
+								<div class="numb-prev__slider">
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-12-1.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-12-2.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-12-3.PNG">
+										</div>
+									</div>
+									<div class="numb-prev__slider-item-cntr">
+										<div class="numb-prev__slider-item">
+											<img src="img\search-prevs\search-prev-12-4.PNG">
+										</div>
+									</div>
+								</div>
+								<a href="#" class="numb-prev__description">
+									<div class="numb-prev__desc-numb-price">
+										<div class="numb-prev__desc-numb">352 </div>
+										<div class="numb-prev__desc-price">
+											<span class="numb-prev__desc-sum-of-money">5000</span><span data-loc="ByDay">в сутки</span>
+										</div>
+									</div>
+									<div class="numb-prev__desc-rating">
+										<fieldset class="numb-prev__desc-stars">
+											<input class="numb-prev__desc-star" type="radio" name="rating12" aria-label="squalor" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating12" aria-label="bad" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating12" aria-label="not so hot" disabled checked>
+											<input class="numb-prev__desc-star" type="radio" name="rating12" aria-label="good" disabled>
+											<input class="numb-prev__desc-star" type="radio" name="rating12" aria-label="luxury" disabled>
+										</fieldset>
+										<div class="numb-prev__desc-reviews">
+											<span class="numb-prev__desc-review-amount">55 </span><span data-loc="Reviews">Отзывов</span>
+										</div>
+									</div>
+								</a>
+							</article>
 						</div>
-						<div class="main__paging">
-							
+						<div class="paging main__paging_rep">
+							<ul class="paging__pages">
+								<li><a class="page previous-page" href="#"></a></li>
+								<li><a class="page current-page" href="#">1</a></li>
+								<li><a class="page" href="#">2</a></li>
+								<li><a class="page" href="#">3</a></li>
+								<li><a class="page ellipsed-pages" href="#">...</a></li>
+								<li><a class="page current-page" href="#">15</a></li>
+								<li><a class="page next-page" href="#"></a></li>
+							</ul>
+							<div class="paging__description">
+								
+							</div>							
 						</div>
 					</section>
-					<!--form class="main-form-log">
-						<h1 class="main-forms-h1" data-loc="Login" style="font-fmily: Quicksand">Login</h1>
-						<input class="text-field main-form-log__text-field" type="text" name="login" placeholder="Email" data-loc-ph="Email">
-						<input class="text-field main-form-log__text-field" type="text" name="password" placeholder="Password" data-loc-ph="Password">
-						<div class="gradient-btn gradient-btn_arrowed main-form-log__submit-btn">
-							<input class="gradient-btn__btn" type="button" name="grd-btn">
-							<div class="gradient-btn__render">
-								<a class="gradient-btn__text gradient-btn__text_def" href="#" data-loc="Login">Login</a>
-							</div>
-						</div>
-						<div class="main-form-log__txt-btn-group">
-							<span class="main-form-log__txt-in-group" data-loc="Text06">Have you not Toxin's account?</span>
-							<div class="gradient-btn main-form-log__register-btn">
-								<input class="gradient-btn__btn" type="button" name="grd-btn">
-								<div class="gradient-btn__render">
-									<a class="gradient-btn__text gradient-btn__text_def" href="">Register</a>
-								</div>
-							</div>
-						</div>
-					</form-->
 				</div>
 			</main>
+			<div class="body-footer-line"></div>
 			<footer>
-				<div class="footer-inner">
-					<div class="footer-body">
-						<div class="footer-body__logo">
+				<div class="footer__inner">
+					<div class="footer__body">
+						<div class="footer__logo">
 							<a href="#">
-								<img src="img/logo_Toxin.png" alt="logo">
+								<img src="img/logo-toxin.png" alt="logo">
 							</a>
-							<p data-loc="Text02">Seat reservation in the best hotel 2019 by version «Hotel's review» association</p>
+							<p data-loc="Text02">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
 						</div>
-						<div class="footer-body__nav">
-							<h3 data-loc="Navigation">Navigation</h3>
-							<ul>
-								<li><a href="#" data-loc="AboutUs">About Us</a></li>
-								<li><a href="#" data-loc="News">News</a></li>
-								<li><a href="#" data-loc="Support">Support</a></li>
-								<li><a href="#" data-loc="Products">Products</a></li>
+						<div class="footer__nav footer__nav-nav">
+							<label class="footer__nav-toggle-label" for="footerNavToggleId">
+								<h3 data-loc="Navigation">Навигация</h3>
+							</label>
+							<input class="footer__nav-toggle-chackbox" type="checkbox" id="footerNavToggleId">
+							<ul class="footer__list-nav">
+								<li><a href="#" data-loc="AboutUs">О Нас</a></li>
+								<li><a href="#" data-loc="News"></a>Новости</li>
+								<li><a href="#" data-loc="Support">Служба поддержки</a></li>
+								<li><a href="#" data-loc="Products">Услуги</a></li>
 							</ul>
 						</div>
-						<div class="footer-body__nav">
-							<h3 data-loc="AboutUs">About Us</h3>
-							<ul>
-								<li><a href="#" data-loc="WhoWeAre">Who we are</a></li>
-								<li><a href="#" data-loc="OurTeam">Our team</a></li>
-								<li><a href="#" data-loc="Careers">Careers</a></li>
-								<li><a href="#" data-loc="Investors">Investors</a></li>
+						<div class="footer__nav footer__nav-about">
+							<label class="footer__about-toggle-label" for="footerAboutToggleId">
+								<h3 data-loc="AboutUs">О Нас</h3>
+							</label>
+							<input class="footer__about-toggle-chackbox" type="checkbox" id="footerAboutToggleId">
+							<ul class="footer__list-about">
+								<li><a href="#" data-loc="WhoWeAre">О сервисе</a></li>
+								<li><a href="#" data-loc="OurTeam">Наша команда</a></li>
+								<li><a href="#" data-loc="Careers">Вакансии</a></li>
+								<li><a href="#" data-loc="Investors">Инвесторы</a></li>
 							</ul>
 						</div>
-						<div class="footer-body__nav">
-							<h3 data-loc="Support">Support</h3>
-							<ul>
-								<li><a href="#" data-loc="Doc">Documentation</a></li>
-								<li><a href="#" data-loc="Community">Community</a></li>
-								<li><a href="#" data-loc="GetInTouch">Get in Touch</a></li>
-								<li class="loc-link-eng loc-link_hidden-lang">
+						<div class="footer__nav footer__nav-sup">
+							<label class="footer__sup-toggle-label" for="footerSupToggleId">
+								<h3 data-loc="Support">Служба поддержки</h3>
+							</label>
+							<input class="footer__sup-toggle-chackbox" type="checkbox" id="footerSupToggleId">
+							<ul class="footer__list-sup">
+								<li><a href="#" data-loc="Doc">Соглашения</a></li>
+								<li><a href="#" data-loc="Community">Сообщества</a></li>
+								<li><a href="#" data-loc="GetInTouch">Связь с нами</a></li>
+								<li class="loc-link-eng">
 									<a href="#" >
 										<img class="flag_UK" src="img/flag_eng.PNG" alt="localize in english">
 										English
 									</a>
 								</li>
-								<li class="loc-link-rus">
+								<li class="loc-link-rus loc-link_hidden-lang">
 									<a href="#">
 										<img class="flag_russia" src="img/flag_rus.PNG" alt="localize in russian">
 										Русский
@@ -170,35 +909,60 @@
 								</li>
 							</ul>
 						</div>
-						<div class="footer-body__subscription">
-							<h3 data-loc="Subscription">Subscribe to our newsletter</h3>
-							<p data-loc="Text03">Receive our latest news and promotions in your inbox!</p>
-							<div class="subscription-text-field">
-								<input class="text-field subscription-text-field__txtfld" type="text" name="subscription-email" placeholder="Email" data-loc-ph="SubEMail">
-								<input class="subscription-text-field__btn" type="button" onclick="alert('You\'ve subscripted!');">
+						<div class="footer__subscription">
+							<label class="footer__subscr-toggle-label" for="footerSubscrToggleId">
+								<h3 data-loc="Subscription">Подписка</h3>
+							</label>
+							<input class="footer__subscr-toggle-chackbox" type="checkbox" id="footerSubscrToggleId">
+							<div class="footer__subscr-content">
+								<p data-loc="Text03">Получайте специальные предложения и новости сервиса</p>
+								<div class="subscription-text-field">
+									<input class="text-field subscription-text-field__txtfld" type="text" name="subscription-email" placeholder="Email" data-loc-ph="SubEMail">
+									<input class="subscription-text-field__btn" type="button" onclick="alert('You\'ve subscripted!');">
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="footer-sole">
-						<div class="footer-sole__rights">
-							<a href="#" data-loc="Copyright">Copyright &copy; 2018 Toxin Hotel. All rights reserved.</a>
+					<div class="footer__sole">
+						<div class="footer__rights">
+							<a href="#" data-loc="Copyright">Copyright &copy; 2018 Toxin отель. Все права зачищены.</a>
 						</div>
-						<div class="footer-sole__socials">
-							<ul class="footer-sole__socials-list">
-								<li><a href="#"><img src="img/logo_twitter.png" alt="twitter"></a></li>
-								<li><a href="#"><img src="img/logo_facebook.png" alt="facebook"></a></li>
-								<li><a href="#"><img src="img/logo_instagramm.png" alt="instagramm"></a></li>
+						<div class="footer__socials">
+							<!--ul class="footer__socials-list">
+								<li><a href="#"><img src="img/logo-twitter.png" alt="twitter"></a></li>
+								<li><a href="#"><img src="img/logo-facebook.png" alt="facebook"></a></li>
+								<li><a href="#"><img src="img/logo-instagramm.png" alt="instagramm"></a></li>
+							</ul-->
+							<ul class="footer__socials-list">
+								<li><a class="footer__socials-twitter" href="#"><img src="img/logo-twitter.png" alt="twitter"></a></li>
+								<li><a class="footer__socials-facebook" href="#"><img src="img/logo-facebook.png" alt="facebook"></a></li>
+								<li><a class="footer__socials-instagramm" href="#"><img src="img/logo-instagramm.png" alt="instagramm"></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>				
 			</footer>
 		</div>
+	<!--Plugin JavaScript file-->
 	<!--jQuery-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<!--Plugin JavaScript file-->
+	<!--Off-line jQuery import, if it has not been loaded-->
+	<script>window.jQuery||document.write('<script src="js/plugins/jquery-3.5.0.min.js"><\/script>');</script>
+	<!--script src="js/plugins/jquery-3.5.0.min.js"></script-->
+
+	<!--Ion Range Slider-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+	<!--Off-line Ion Range Slider import-->
+	<script src="js/plugins/ion.rangeSlider.min.js"></script>
+
+	<!--Off-line Slick Slider import-->
+	<script src="js/plugins/slick.min.js"></script>
+	<!--Off-line Air datapicker import-->
+	<script src="js/plugins/datepicker.min.js"></script>
+
+	<!--Internal scripts-->
 	<script src="js/common.js"></script>
+	<script src="js/modal-forms.js"></script>
 	<script src="js/localize.js"></script>
 	<script src="js/locDicRus.js"></script>
 	<script src="js/locDicEng.js"></script>

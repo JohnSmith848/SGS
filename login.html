@@ -1,149 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
 		<title>Toxin</title>
-		<!--link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet"-->
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width">
+
+		<!--On-line text fonts.-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap">
+		<!--Off-line text fonts.-->
+		<link rel="stylesheet" type="text/css" href="css/fonts-off-line.css">
+
+		<!--Uncompleted icon fonts. Get rid of a dependencies and remove/-->
+		<!--link rel="stylesheet" type="text/css" href="css/fonts.css"-->
+		<!--Completed icon font-->
+		<link rel="stylesheet" type="text/css" href="css/icon-fonts.css">
+
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="css/style-ie.css">
+		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="css/login.css">
 	</head>
-	<body><div class="body-container">
-		<header class="header">
-			<div class="header-container">
-				<div class="header__logo">
-					<a href="#">
-						<img src="img/logo_Toxin.png" alt="logo">
-					</a>
-				</div>
-				<nav class="header__menu">
-					<ul class="header__list">
-						<li class="header__item"><a href="#" data-loc="Home">Home</a></li>
-						<li class="header__item"><a href="#" data-loc="AboutUs">About Us</a></li>
-						<li class="header__item"><a href="#" data-loc="Services">Services</a></li>
-						<li class="header__item"><a href="#" data-loc="Careers">Careers</a></li>
-						<li class="header__item"><a href="#" data-loc="News">News</a></li>
-						<li class="header__item"><a href="#" data-loc="Doc">Documentation</a></li>
-						<li class="header__item header__item_btn">
-							<div class="gradient-btn header__item-btn-log">
-								<div class="gradient-btn__render">
-									<a class="gradient-btn__text gradient-btn__text_def" href="./login.html" data-loc-gbb="Login">Login</a>
-								</div>
-							</div>
-						</li>
-						<li class="header__item header__item_btn">
-							<div class="gradient-btn header__item-btn-reg">
-								<div class="gradient-btn__render">
-									<a class="gradient-btn__text gradient-btn__text_def" href="./register.html" data-loc-gbb="Register">Register</a>
-								</div>
-							</div>
-						</li>	
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<div class="main-container-out"><main class="main">
-			<div class="main-container_main-form">
-				<form class="main-form-log">
-					<h1 class="main-forms-h1" data-loc="Login" style="font-fmily: Quicksand">Login</h1>
-					<input class="text-field main-form-log__text-field" type="text" name="login" placeholder="Email" data-loc-ph="Email">
-					<input class="text-field main-form-log__text-field" type="text" name="password" placeholder="Password" data-loc-ph="Password">
-					<div class="gradient-btn gradient-btn_arrowed main-form-log__submit-btn">
-						<input class="gradient-btn__btn" type="button" name="grd-btn">
-						<div class="gradient-btn__render">
-							<a class="gradient-btn__text gradient-btn__text_def" href="#" data-loc="Login">Login</a>
-						</div>
+	<body>
+		<div class="body__inner">
+			<header class="header">
+				<div class="header__inner">
+					<div class="header__logo">
+						<a href="#">
+							<img src="img/logo-toxin.png" alt="logo">
+						</a>
 					</div>
-					<div class="main-form-log__txt-btn-group">
-						<span class="main-form-log__txt-in-group" data-loc="Text06">Have you not Toxin's account?</span>
-						<div class="gradient-btn main-form-log__register-btn">
+					<div class="header__gap"></div>
+					<nav class="header__menu header__menu-list">
+						<ul class="header__list">
+							<!--DELETE for matching of the landing design-->
+							<!--li class="header__item"><a class="header__link" href="./index.html" data-loc="Home">На главную</a></li-->
+							<!--END_DELETE-->
+							<li class="header__item"><a class="header__link" href="#" data-loc="AboutUs">О Нас</a></li>
+							<li class="header__item">
+								<input class="header__dd-item-chackbox" type="checkbox" id="MenuIDServices">
+								<label class="header__link header__dd-item-label" for="MenuIDServices" href="#" data-loc="Services">Услуги</label>
+								<ul class="header__list2">
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service1">Услугa 1</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service2">Услугa 2</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service3">Услугa 3</a></li>
+								</ul>
+							</li>
+							<li class="header__item"><a class="header__link" href="#" data-loc="Careers">Вакансии</a></li>
+							<li class="header__item"><a class="header__link" href="#" data-loc="News">Новости</a></li>
+							<li class="header__item">
+								<input class="header__dd-item-chackbox" type="checkbox" id="MenuIDDocumentation">
+								<label class="header__link header__dd-item-label" for="MenuIDDocumentation" href="#" data-loc="Doc">Соглашения</label>
+								<ul class="header__list2">
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc1">Соглашение 1</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc2">Соглашение 2</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc3">Соглашение 3</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc4">Соглашение 4</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc5">Соглашение 5</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<nav class="header__menu header__menu-btns">
+						<ul class="header__list">
+							<li class="header__item header__item_btn">
+								<div class="gradient-btn hovered header__item-btn_log">
+									<div class="gradient-btn__render">
+										<a class="gradient-btn__text gradient-btn__text_def" href="./login.html" data-loc-gbb="Login">Войти</a>
+									</div>
+								</div>
+							</li>
+							<li class="header__item header__item_btn">
+								<div class="gradient-btn header__item-btn_reg">
+									<div class="gradient-btn__render">
+										<a class="gradient-btn__text gradient-btn__text_def" href="./register.html" data-loc-gbb="Register">Зарегистрироваться</a>
+									</div>
+								</div>
+							</li>	
+						</ul>
+					</nav>
+					<div class="header__menu-mobile">
+						<div class="header__menu-burger"><span></span></div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="main__inner">
+					<form class="login-form login-form_rep form-rus-loc">
+						<h1 data-loc="Login">Войти</h1>
+						<input class="text-field log-frm__mail-txt-fld_rep main-form-log__text-field" type="text" name="login" placeholder="Email" data-loc-ph="Email">
+						<input class="text-field log-frm__password-txt-fld_rep main-form-log__text-field" type="text" name="password" placeholder="Пароль" data-loc-ph="Password">
+						<div class="gradient-btn gradient-btn__arrowed log-frm__submit-btn_rep">
 							<input class="gradient-btn__btn" type="button" name="grd-btn">
 							<div class="gradient-btn__render">
-								<a class="gradient-btn__text gradient-btn__text_def" href="">Register</a>
+								<a class="gradient-btn__text gradient-btn__text_def" href="#" data-loc="Login">Войти</a>
+							</div>
+						</div>
+						<div class="log-frm__txt-btn-group_rep">
+							<span data-loc="Text06">Нет аккаунта на Toxin?</span>
+							<div class="gradient-btn hovered log-frm__register-btn_rep">
+								<input class="gradient-btn__btn" type="button" name="grd-btn">
+								<div class="gradient-btn__render">
+									<a class="gradient-btn__text gradient-btn__text_def" href="./register.html" data-loc-gbb="Register_2">Создать</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</main>
+			<footer>
+				<div class="footer__inner">
+					<div class="footer__body">
+						<div class="footer__logo">
+							<a href="#">
+								<img src="img/logo-toxin.png" alt="logo">
+							</a>
+							<p data-loc="Text02">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+						</div>
+						<div class="footer__nav footer__nav-nav">
+							<label class="footer__nav-toggle-label" for="footerNavToggleId">
+								<h3 data-loc="Navigation">Навигация</h3>
+							</label>
+							<input class="footer__nav-toggle-chackbox" type="checkbox" id="footerNavToggleId">
+							<ul class="footer__list-nav">
+								<li><a href="#" data-loc="AboutUs">О Нас</a></li>
+								<li><a href="#" data-loc="News"></a>Новости</li>
+								<li><a href="#" data-loc="Support">Служба поддержки</a></li>
+								<li><a href="#" data-loc="Products">Услуги</a></li>
+							</ul>
+						</div>
+						<div class="footer__nav footer__nav-about">
+							<label class="footer__about-toggle-label" for="footerAboutToggleId">
+								<h3 data-loc="AboutUs">О Нас</h3>
+							</label>
+							<input class="footer__about-toggle-chackbox" type="checkbox" id="footerAboutToggleId">
+							<ul class="footer__list-about">
+								<li><a href="#" data-loc="WhoWeAre">О сервисе</a></li>
+								<li><a href="#" data-loc="OurTeam">Наша команда</a></li>
+								<li><a href="#" data-loc="Careers">Вакансии</a></li>
+								<li><a href="#" data-loc="Investors">Инвесторы</a></li>
+							</ul>
+						</div>
+						<div class="footer__nav footer__nav-sup">
+							<label class="footer__sup-toggle-label" for="footerSupToggleId">
+								<h3 data-loc="Support">Служба поддержки</h3>
+							</label>
+							<input class="footer__sup-toggle-chackbox" type="checkbox" id="footerSupToggleId">
+							<ul class="footer__list-sup">
+								<li><a href="#" data-loc="Doc">Соглашения</a></li>
+								<li><a href="#" data-loc="Community">Сообщества</a></li>
+								<li><a href="#" data-loc="GetInTouch">Связь с нами</a></li>
+								<li class="loc-link-eng">
+									<a href="#" >
+										<img class="flag_UK" src="img/flag_eng.PNG" alt="localize in english">
+										English
+									</a>
+								</li>
+								<li class="loc-link-rus loc-link_hidden-lang">
+									<a href="#">
+										<img class="flag_russia" src="img/flag_rus.PNG" alt="localize in russian">
+										Русский
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__subscription">
+							<label class="footer__subscr-toggle-label" for="footerSubscrToggleId">
+								<h3 data-loc="Subscription">Подписка</h3>
+							</label>
+							<input class="footer__subscr-toggle-chackbox" type="checkbox" id="footerSubscrToggleId">
+							<div class="footer__subscr-content">
+								<p data-loc="Text03">Получайте специальные предложения и новости сервиса</p>
+								<div class="subscription-text-field">
+									<input class="text-field subscription-text-field__txtfld" type="text" name="subscription-email" placeholder="Email" data-loc-ph="SubEMail">
+									<input class="subscription-text-field__btn" type="button" onclick="alert('You\'ve subscripted!');">
+								</div>
 							</div>
 						</div>
 					</div>
-				</form>
-			</div>
-		</main></div>
-		<div class="footer-container">
-			<footer>
-				<div class="footer-body">
-					<div class="footer-body__logo">
-						<a href="#">
-							<img src="img/logo_Toxin.png" alt="logo">
-						</a>
-						<p data-loc="Text02">Seat reservation in the best hotel 2019 by version «Hotel's review» association</p>
-					</div>
-					<div class="footer-body__nav">
-						<h3 data-loc="Navigation">Navigation</h3>
-						<ul>
-							<li><a href="#" data-loc="AboutUs">About Us</a></li>
-							<li><a href="#" data-loc="News">News</a></li>
-							<li><a href="#" data-loc="Support">Support</a></li>
-							<li><a href="#" data-loc="Products">Products</a></li>
-						</ul>
-					</div>
-					<div class="footer-body__nav">
-						<h3 data-loc="AboutUs">About Us</h3>
-						<ul>
-							<li><a href="#" data-loc="WhoWeAre">Who we are</a></li>
-							<li><a href="#" data-loc="OurTeam">Our team</a></li>
-							<li><a href="#" data-loc="Careers">Careers</a></li>
-							<li><a href="#" data-loc="Investors">Investors</a></li>
-						</ul>
-					</div>
-					<div class="footer-body__nav">
-						<h3 data-loc="Support">Support</h3>
-						<ul>
-							<li><a href="#" data-loc="Doc">Documentation</a></li>
-							<li><a href="#" data-loc="Community">Community</a></li>
-							<li><a href="#" data-loc="GetInTouch">Get in Touch</a></li>
-							<li class="loc-link-eng loc-link_hidden-lang">
-								<a href="#" >
-									<img class="flag_UK" src="img/flag_eng.PNG" alt="localize in english">
-									English
-								</a>
-							</li>
-							<li class="loc-link-rus">
-								<a href="#">
-									<img class="flag_russia" src="img/flag_rus.PNG" alt="localize in russian">
-									Русский
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer-body__subscription">
-						<h3 data-loc="Subscription">Subscribe to our newsletter</h3>
-						<p data-loc="Text03">Receive our latest news and promotions in your inbox!</p>
-						<div class="subscription-text-field">
-							<input class="text-field subscription-text-field__txtfld" type="text" name="subscription-email" placeholder="Email" data-loc-ph="SubEMail">
-							<input class="subscription-text-field__btn" type="button" onclick="alert('You\'ve subscripted!');">
+					<div class="footer__sole">
+						<div class="footer__rights">
+							<a href="#" data-loc="Copyright">Copyright &copy; 2018 Toxin отель. Все права зачищены.</a>
+						</div>
+						<div class="footer__socials">
+							<!--ul class="footer__socials-list">
+								<li><a href="#"><img src="img/logo-twitter.png" alt="twitter"></a></li>
+								<li><a href="#"><img src="img/logo-facebook.png" alt="facebook"></a></li>
+								<li><a href="#"><img src="img/logo-instagramm.png" alt="instagramm"></a></li>
+							</ul-->
+							<ul class="footer__socials-list">
+								<li><a class="footer__socials-twitter" href="#"><img src="img/logo-twitter.png" alt="twitter"></a></li>
+								<li><a class="footer__socials-facebook" href="#"><img src="img/logo-facebook.png" alt="facebook"></a></li>
+								<li><a class="footer__socials-instagramm" href="#"><img src="img/logo-instagramm.png" alt="instagramm"></a></li>
+							</ul>
 						</div>
 					</div>
-				
-				</div>
-				<div class="footer-sole">
-					<div class="footer-sole__rights">
-						<a href="#" data-loc="Copyright">Copyright &copy; 2018 Toxin Hotel. All rights reserved.</a>
-					</div>
-					<div class="footer-sole__socials">
-						<ul class="footer-sole__socials-list">
-							<li><a href="#"><img src="img/logo_twitter.png" alt="twitter"></a></li>
-							<li><a href="#"><img src="img/logo_facebook.png" alt="facebook"></a></li>
-							<li><a href="#"><img src="img/logo_instagramm.png" alt="instagramm"></a></li>
-						</ul>
-					</div>
-				</div>
+				</div>				
 			</footer>
-		</div>				
-	</div>
-	<script src="js/register.js"></script>
-	<script src="js/locDicRus.js"></script>
-	<script src="js/locDicEng.js"></script>
-	<script src="js/localize.js"></script>
-	<script src="js/common.js"></script>
+		</div>
+		<!--jQuery-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!--Off-line jQuery import-->
+		<script>window.jQuery||document.write('<script src="js/plugins/jquery-3.5.0.min.js"><\/script>');</script>
+		<script src="js/common.js"></script>
+		<script src="js/locDicRus.js"></script>
+		<script src="js/locDicEng.js"></script>
+		<script src="js/localize.js"></script>
+		<script src="js/login.js"></script>
 	</body>
 </html>

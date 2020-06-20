@@ -24,42 +24,42 @@
 	width: 380px;
 	height: 375px;
 }
-.landing-form__repose{
+.landing-form_rep{
 	margin-top:70px;
 	align-self:flex-start;
 }
-.lf-double-dates-group{
-	margin:22px 0 0 0;
-}
-.lf-double-dates-group>.named-field{
+.double-dates-fields-group>.named-field{
 	display: inline-block;
 	width:152px;
 }
-.lf-double-dates-group .named-field+.named-field{
+.double-dates-fields-group .named-field+.named-field{
 	margin-left:11px;
 }
+.lnd-frm__double-dates-fields-group_rep{
+	margin:22px 0 0 0;
+}
 
-.guests-nf__lf-rep{ /*guests-named-field__landing-form-reposition*/
+.lnd-frm__guests-named-field_rep{ /*landing-form__guests-named-field_reposition*/
 	margin:16px 0 0 0;
 }
 
-.submit-bt__lf-rep{
+.lnd-frm__submit-button_rep{
 	margin:25px 0 0 0;
 	height:45px;
 }
 
 /*the guests modal form adoptation classes*/
-.qimf__guests{
+.lnd-frm__qimf-guests_rep{
 	/* modal-form-guests
 	background-color: #fff;*/
 	/*display:none;
 	background-image: url(../img/GuestsDrDnFrBg.svg);
 	padding:31px 31px;
-	width:360px;
-	height:199px;
 	position:relative;*/
-	left:10px;
-	top:-130px;
+	width:320px;
+	height:157px;
+	left:30px;
+	top:-110px;
 	align-self:flex-start;
 	z-index:5;
 }
@@ -68,9 +68,9 @@
 .main__form-wrapper{
 	/*This crutch need to squeeze too very big dataPicker's form to parent flex contaner*/
 	position:relative;
-	align-self:flex-start;
+	align-self:stretch;
 }
-.dimf__arr-dep{
+.lnd-frm__dimf-arr-dep_rep{
 	position:absolute;
 	left: 29px;
 	top: -186px;
@@ -100,5 +100,67 @@
 	color: rgba(31, 32, 65, 0.75);
 	line-height: 24px;
 	text-align: right;
+}
+
+@media(max-width:1100px){
+	.main{
+		height:815px;
+	}
+	.landing-form_rep{
+		margin-top:55px;/* 135 --- 70(70)-85(70-15=55)-135(70-65=5)*/
+	}
+}
+@media(max-width:460px){
+	.main{
+		height:765px;
+	}	
+	.landing-form_rep{
+		margin-top:5px;/* 135 --- 70(70)-85(70-15=55)-135(70-65=5)*/
+	}	
+}
+@media(max-width:410px){
+	.landing-form{
+		padding:5px;
+		width:99%;
+		height:315px;
+	}
+	.lnd-frm__double-dates-fields-group_rep>.named-field{
+		width:47.2%;
+	}
+	.lnd-frm__dimf-arr-dep_rep{
+		left: 5px;
+		top: -160px;
+		width:95%;
+	}
+	.datepicker_arr-dep .datepicker{
+		margin:0 auto;
+	}
+	.lnd-frm__qimf-guests_rep{
+		width:95.7%;
+		left:6px;
+		top:-84px;
+	}
+}
+
+@media(max-width:368px){
+	.lnd-frm__dimf-arr-dep_rep{
+		padding-left:0;
+		padding-right:0;
+	}
+	.dimf-ad__button-bar{
+		margin-left:14px;
+		margin-right:14px;
+	}
+	.lnd-frm__qimf-guests_rep{
+		width:95.3%;
+	}
+}
+@media(max-width:340px){
+	.datepicker_arr-dep .datepicker{
+		width:90%;
+	}
+	.lnd-frm__qimf-guests_rep{
+		width:94.9%;
+	}
 }
 

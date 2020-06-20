@@ -1,0 +1,10 @@
+.footer__socials-twitter img,
+.footer__socials-facebook img,
+.footer__socials-instagramm img{
+	display:inline-block;
+}
+.footer__socials-twitter:after,
+.footer__socials-facebook:after,
+.footer__socials-instagramm:after{
+	content:'';
+}

@@ -31,12 +31,31 @@ rusLoc.addEventListener(
 			if (tE[i].hasAttribute("data-loc-ph")){
 				if(tE[i].getAttribute("data-loc-ph")=="HowManyGuests"){
 					console.log("AdultsGuestsCount, ChildrenGuestsCount, BiAGuestsCount = "+AdultsGuestsCount+" "+ChildrenGuestsCount+" "+BiAGuestsCount);
-					tE[i].placeholder=getGuestsPlaceholder(AdultsGuestsCount+ChildrenGuestsCount,BiAGuestsCount);
+					tE[i].placeholder=getGuestsValue(AdultsGuestsCount+ChildrenGuestsCount,BiAGuestsCount);
 				}else{
 					tE[i].placeholder=PlaceholderRussianDictionary[tE[i].getAttribute("data-loc-ph")];					
 				}
 			}
+			// 2.4 in the text pseudoelements
+			if (tE[i].hasAttribute("data-loc-ps")){
+				tE[i].classList.add(PseudoelementRussianDictionary[tE[i].getAttribute("data-loc-ps")][0]);
+				for(let y=1;y<PseudoelementRussianDictionary[tE[i].getAttribute("data-loc-ps")].length;y++){
+					tE[i].classList.remove(PseudoelementRussianDictionary[tE[i].getAttribute("data-loc-ps")][y]);
+				};
+			}
+			// 2.5 (font-famely) to the h1 text in form
+			if (tE[i].tagName=="FORM"){
+				tE[i].classList.add("form-rus-loc");
+			}
 		}
+		//3. Change the geometry
+		if(location.href.includes('search-room.html')){/*location.href.indexOf('search-room.html')*/
+			modalFormNumberImprovements.classList.add('srch-frm__qimf-number-improvements_rep-rus');
+		};
+		if(location.href.includes('register.html')){
+			document.querySelector('.registration-form').classList.add('registration-form_rep-rus');
+		}
+
 	}
 );
 
@@ -68,11 +87,29 @@ engLoc.addEventListener(
 			// 2.3 in the placeholder attributes
 			if (tE[i].hasAttribute("data-loc-ph")){
 				if(tE[i].getAttribute("data-loc-ph")=="HowManyGuests"){
-					tE[i].placeholder=getGuestsPlaceholder(AdultsGuestsCount+ChildrenGuestsCount,BiAGuestsCount);
+					tE[i].placeholder=getGuestsValue(AdultsGuestsCount+ChildrenGuestsCount,BiAGuestsCount);
 				}else{
 					tE[i].placeholder=PlaceholderEnglishDictionary[tE[i].getAttribute("data-loc-ph")];					
 				}
 			}
+			// 2.4 in the text pseudoelements
+			if (tE[i].hasAttribute("data-loc-ps")){
+				tE[i].classList.add(PseudoelementEnglishDictionary[tE[i].getAttribute("data-loc-ps")][0]);
+				for(let y=1;y<PseudoelementEnglishDictionary[tE[i].getAttribute("data-loc-ps")].length;y++){
+					tE[i].classList.remove(PseudoelementEnglishDictionary[tE[i].getAttribute("data-loc-ps")][y]);
+				};
+			}
+			// 2.5 (font-famely) to the h1 text in form
+			if (tE[i].nodeName =="FORM"){
+				tE[i].classList.remove("form-rus-loc");
+			}
+		}
+		//3. Change the geometry
+		if(location.href.includes('search-room.html')){
+			modalFormNumberImprovements.classList.remove('srch-frm__qimf-number-improvements_rep-rus');
+		};
+		if(location.href.indexOf('register.html')){
+			document.querySelector('.registration-form').classList.remove('registration-form_rep-rus');
 		}
 	}
 );
@@ -94,7 +131,7 @@ function russianNumber(number, numberForms, numberOffset){
 	}
 }
 
-function getGuestsPlaceholder(guests, babiesInArms){
+function getGuestsValue(guests, babiesInArms){
 	let ph="";
 	if(curLoc.classList.contains("loc-link-eng")){
 		if(guests==0){return PlaceholderEnglishDictionary["HowManyGuests"][0]};
@@ -107,5 +144,23 @@ function getGuestsPlaceholder(guests, babiesInArms){
 		ph=guests+" "+russianNumber(guests,PlaceholderRussianDictionary["HowManyGuests"],1);
 		if(babiesInArms==0){return ph}
 		return ph+", "+babiesInArms+" "+russianNumber(babiesInArms,PlaceholderRussianDictionary["HowManyGuests"],4)
+	}
+}
+
+function getNumberImprovementsValue(bedrooms,beds,bathrooms){
+	let ph="";
+	if(curLoc.classList.contains("loc-link-eng")){
+		//if(bedrooms==0){return PlaceholderEnglishDictionary["NumberImprovements"][0]};
+		ph=bedrooms+" "+englishNumber(bedrooms,PlaceholderEnglishDictionary["NumberImprovements"],1);
+		ph+=", "+beds+" "+englishNumber(beds,PlaceholderEnglishDictionary["NumberImprovements"],3);
+		//if(babiesInArms==0){return ph}
+		return ph+", "+bathrooms+" "+englishNumber(bathrooms,PlaceholderEnglishDictionary["NumberImprovements"],5)
+	}
+	if(curLoc.classList.contains("loc-link-rus")){
+		//if(guests==0){return PlaceholderRussianDictionary["NumberImprovements"][0]};
+		ph=bedrooms+" "+russianNumber(bedrooms,PlaceholderRussianDictionary["NumberImprovements"],1);
+		ph+=", "+beds+" "+russianNumber(beds,PlaceholderRussianDictionary["NumberImprovements"],4);
+		//if(babiesInArms==0){return ph}
+		return ph+", "+bathrooms+" "+russianNumber(bathrooms,PlaceholderRussianDictionary["NumberImprovements"],7)
 	}
 }

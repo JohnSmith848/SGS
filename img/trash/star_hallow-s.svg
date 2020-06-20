@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="20px"
+   height="20px"
+   viewBox="0 0 20 20"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="star_hallow-s.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="25.6"
+     inkscape:cx="2.578125"
+     inkscape:cy="10"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs6609">
+    <linearGradient
+       gradientTransform="matrix(0.90180357,0,0,0.89520796,-1012.6453,-1073.6748)"
+       id="paint61_linear"
+       x1="1134"
+       y1="1198.5"
+       x2="1134"
+       y2="1222.5"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#BC9CFF"
+         id="stop6430" />
+      <stop
+         offset="1"
+         stop-color="#8BA4F9"
+         id="stop6432" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata6612">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       d="M 9.9999995,13.035989 13.381763,15.050207 12.497995,11.236621 15.491984,8.631566 11.524047,8.2913869 9.9999995,4.6836988 8.4759515,8.2913869 4.5080158,8.631566 7.5020036,11.236621 6.6182361,15.050207 Z M 19,7.4946518 14.103206,11.737938 15.582164,18.03125 9.9999995,14.674219 4.4178354,18.03125 5.8967933,11.737938 0.99999988,7.4946518 7.4659315,6.948575 9.9999995,1.0312499 12.534068,6.948575 Z"
+       id="path4807"
+       inkscape:connector-curvature="0"
+       style="fill:url(#paint61_linear);stroke-width:0.89849973"
+       inkscape:export-filename="E:\свалка\_WebDevTests\SecondStageQuest\path4807_star_hallow.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

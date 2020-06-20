@@ -1,7 +1,31 @@
+const searchRoomPage=true;
+
+const $sSlider=$(".numb-prev__slider");
 const $rSlider=$(".js-range-slider");
 const $rsOutputTo=$(".drs__value-to");
 const $rsOutputFrom=$(".drs__value-from");
-let rsIntance;
+let rsInstance;
+let ssInstance=new Array(11);
+
+if (typeof $sSlider === "array"){
+	for (let i=0;i<$sSlider.length;i++){
+		ssInstance[i]=$sSlider[i].slick({
+			nextArrow: '<button type="button" class="numb-prev__slider-navbtn numb-prev__slider-navbtn_next"></button>',
+			prevArrow: '<button type="button" class="numb-prev__slider-navbtn numb-prev__slider-navbtn_prev"></button>',
+			lazyLoad: 'ondemand',
+  			dots: true,
+			dotsClass: 'numb-prev__slider-nav-dots',
+		})
+	}
+}else{
+	ssInstance[0]=$sSlider.slick({
+		nextArrow: '<button type="button" class="numb-prev__slider-navbtn numb-prev__slider-navbtn_next"></button>',
+		prevArrow: '<button type="button" class="numb-prev__slider-navbtn numb-prev__slider-navbtn_prev"></button>',
+		lazyLoad: 'ondemand',
+		dots: true,
+		dotsClass: 'numb-prev__slider-nav-dots',
+	})
+}
 
 $rSlider.ionRangeSlider({
  	skin:"big",
@@ -17,7 +41,7 @@ $rSlider.ionRangeSlider({
 	onFinish: updateText,
 });
 
-rsIntance=$rSlider.data("ionRangeSlider");
+rsInstance=$rSlider.data("ionRangeSlider");
 
 function updateText(data){
 	$rsOutputFrom.prop("innerHTML",numberPrettifier(data.from));
@@ -34,3 +58,7 @@ function numberPrettifier(number){
 		i=i-3
 	}
 }
+
+
+
+
