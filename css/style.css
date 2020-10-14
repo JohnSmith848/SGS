@@ -169,6 +169,14 @@ It's needed for adding the arrow pseudoelement*/
 	margin: 5px 0;
 }
 
+.double-dates-fields-group>.named-field{
+	display: inline-block;
+	width:152px;
+}
+.double-dates-fields-group .named-field+.named-field{
+	margin-left:11px;
+}
+
 /*2.2. all buttons styles*/
 
 /*2.2.1 gradient button styles*/
@@ -522,6 +530,7 @@ rd-btn-grp modal-form-guests__btn-grp
 
 .checkbox-btn__text{
 	margin:0;
+	padding-top:2px;
 }
 .checkbox-btn__small-text{
 	margin:0;
@@ -576,9 +585,10 @@ rd-btn-grp modal-form-guests__btn-grp
 	color: rgba(31, 32, 65, 0.5);
 }
 .checkbox-grp__check-box{
-	/*position:absolute;*/
+	/*position:absolute;
 	width:0px;
-	height:0px;
+	height:0px;*/
+	display:none;
 	outline:none;
 }
 .checkbox-grp__check-box:checked~.expanded-checkbox-btn{

@@ -13,7 +13,7 @@ if (typeof $sSlider === "array"){
 			nextArrow: '<button type="button" class="numb-prev__slider-navbtn numb-prev__slider-navbtn_next"></button>',
 			prevArrow: '<button type="button" class="numb-prev__slider-navbtn numb-prev__slider-navbtn_prev"></button>',
 			lazyLoad: 'ondemand',
-  			dots: true,
+			dots: true,
 			dotsClass: 'numb-prev__slider-nav-dots',
 		})
 	}

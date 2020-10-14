@@ -28,13 +28,6 @@
 	margin-top:70px;
 	align-self:flex-start;
 }
-.double-dates-fields-group>.named-field{
-	display: inline-block;
-	width:152px;
-}
-.double-dates-fields-group .named-field+.named-field{
-	margin-left:11px;
-}
 .lnd-frm__double-dates-fields-group_rep{
 	margin:22px 0 0 0;
 }

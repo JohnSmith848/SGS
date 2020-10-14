@@ -92,3 +92,7 @@ const PlaceholderRussianDictionary={
 const PseudoelementRussianDictionary={
 	Lux:["numb-prev__desc-numb_lux-ru","numb-prev__desc-numb_lux-en",],
 }
+
+const JSPhraseRussianDictionary={
+	DoughnutQuality: ['Разочарован','Удовлетворительно','Хорошо','Великолепно'],
+}

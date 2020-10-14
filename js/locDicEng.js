@@ -72,6 +72,7 @@ const EnglishDictionary={
 	Shampoo:"Shampoo",
 	Account:"Account",
 }
+
 const GBBEnglishDictionary={
 	Login: ["Login", "79px"],
 	Register: ["Register", "101px"],
@@ -79,6 +80,7 @@ const GBBEnglishDictionary={
 	SelectNumber: ["Select Number", "100%"],
 	GoToPayment: ["Go to payment", "100%"],
 }
+
 const PlaceholderEnglishDictionary={
 	dmy:["dd.mm.yyyy"],
 	dmy2:["dd.mm.yyyy - dd.mm.yyyy"],
@@ -89,6 +91,11 @@ const PlaceholderEnglishDictionary={
 	LastName:["Last Name"],
 	Password:["Password"],
 }
+
 const PseudoelementEnglishDictionary={
 	Lux:["numb-prev__desc-numb_lux-en","numb-prev__desc-numb_lux-ru",],
+}
+
+const JSPhraseEnglishDictionary={
+	DoughnutQuality: ['Disappointed','Satisfactory','Good','Excellent'],
 }

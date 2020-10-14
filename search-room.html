@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
 		<title>Toxin</title>
+		<meta name="viewport" content="width=device-width">
 		<!--Off-line Air datapicker classes-->
 		<link rel="stylesheet" type="text/css" href="css/plugins/datepicker.min.css">
 		<!--Plugin CSS file with desired skin for ion-rangeslider 2.3.1-->
@@ -18,13 +19,16 @@
 		<link rel="stylesheet" type="text/css" href="css/fonts-off-line.css">
 
 		<!--Uncompleted icon fonts. Get rid of a dependencies and remove/-->
-		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<!--link rel="stylesheet" type="text/css" href="css/fonts.css"-->
 		<!--link rel="stylesheet" type="text/css" href="css/font-cur.css"-->
 		<!--Completed icon font-->
 		<link rel="stylesheet" type="text/css" href="css/icon-fonts.css">
 
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="css/style-ie.css">
+		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="css/search-room.css">    
 	</head>
 	<body class="body">
@@ -91,6 +95,7 @@
 				</div>
 			</header>
 			<main class="main">
+				<input class="checkbox-grp__check-box" type="checkbox" id="AuxiliaryImprovements2">
 				<div class="main__inner">
 					<aside class="main__aside-search">
 						<form class="search-form">
@@ -169,9 +174,11 @@
 							</div>
 							<div class="expanded-checkbox-group srch-frm__auxiliary-improvements_rep">
 								<input class="checkbox-grp__check-box" type="checkbox" id="AuxiliaryImprovements">
-								<label class="checkbox-grp__label" for="AuxiliaryImprovements">
-									<h3 class="expanded-checkbox-group__h3" data-loc="AuxiliaryImprovements">Дополнительные удобства</h3>
-								</label>
+								<!--label class="checkbox-grp__label" for="AuxiliaryImprovements2"-->
+									<label class="checkbox-grp__label" for="AuxiliaryImprovements">
+										<h3 class="expanded-checkbox-group__h3" data-loc="AuxiliaryImprovements">Дополнительные удобства</h3>
+									</label>
+								<!--/label-->
 								<div class="checkbox-btn expanded-checkbox-btn">
 									<input class="checkbox-btn__check-box" type="checkbox" id="Breakfast" disabled>
 									<label class="checkbox-btn__label" for="Breakfast">
@@ -230,7 +237,7 @@
 								</div>
 							</div>
 						</form>
-						<form class="dimf dimf__arr-dep srch-frm__dimf-arr-dep_rep">
+						<form class="dimf dimf_arr-dep srch-frm__dimf-arr-dep_rep">
 							<div class="datepicker-here datepicker_arr-dep"></div>
 							<div class="button-bar dimf-ad__button-bar">
 								<button class="button-cd dimf-ad__btn-clean" data-loc="Clean">Clean</button>
@@ -851,8 +858,8 @@
 						</div>
 					</section>
 				</div>
+				<div class="body-footer-line"></div>
 			</main>
-			<div class="body-footer-line"></div>
 			<footer>
 				<div class="footer__inner">
 					<div class="footer__body">

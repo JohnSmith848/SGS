@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Toxin</title>
+		<meta name="viewport" content="width=device-width">
+		<!--Off-line Air datapicker classes-->
+		<link rel="stylesheet" type="text/css" href="css/plugins/datepicker.min.css">
+		<!--Plugin CSS file with desired skin for ion-rangeslider 2.3.1-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+		<!--Off-line Ion Range Slider classes-->
+		<link rel="stylesheet" href="css/plugins/ion.rangeSlider.min.css"/>
+		<!--Off-line Slick Slider classes-->
+		<link rel="stylesheet" href="css/plugins/slick.css"/>
+		<!--Off-line Chart.js classes-->
+		<link rel="stylesheet" href="css/plugins/Chart.min.css"/>
+
+		<!--On-line text fonts.-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&display=swap">
+		<!--Off-line text fonts.-->
+		<link rel="stylesheet" type="text/css" href="css/fonts-off-line.css">
+
+		<!--Uncompleted icon fonts. Get rid of a dependencies and remove/-->
+		<!--link rel="stylesheet" type="text/css" href="css/fonts.css"-->
+		<!--link rel="stylesheet" type="text/css" href="css/font-cur.css"-->
+		<!--Completed icon font-->
+		<link rel="stylesheet" type="text/css" href="css/icon-fonts.css">
+
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="css/style-ie.css">
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="css/room-details.css">    
+	</head>
+	<body class="body">
+		<div class="body__inner">
+			<header class="header">
+				<div class="header__inner">
+					<div class="header__logo">
+						<a href="#">
+							<img src="img/logo-toxin.png" alt="logo">
+						</a>
+					</div>
+					<div class="header__gap"></div>
+					<nav class="header__menu header__menu-list">
+						<ul class="header__list">
+							<!--DELETE for matching of the landing design>
+							<li class="header__item"><a class="header__link" href="#" data-loc="Home">На главную</a></li>
+							<END_DELETE-->
+							<li class="header__item"><a class="header__link" href="#" data-loc="AboutUs">О Нас</a></li>
+							<li class="header__item">
+								<input class="header__dd-item-chackbox" type="checkbox" id="MenuIDServices">
+								<label class="header__link header__dd-item-label" for="MenuIDServices" href="#" data-loc="Services">Услуги</label>
+								<ul class="header__list2">
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service1">Услугa 1</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service2">Услугa 2</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Service3">Услугa 3</a></li>
+								</ul>
+							</li>
+							<li class="header__item"><a class="header__link" href="#" data-loc="Careers">Вакансии</a></li>
+							<li class="header__item"><a class="header__link" href="#" data-loc="News">Новости</a></li>
+							<li class="header__item">
+								<input class="header__dd-item-chackbox" type="checkbox" id="MenuIDDocumentation">
+								<label class="header__link header__dd-item-label" for="MenuIDDocumentation" href="#" data-loc="Doc">Соглашения</label>
+								<ul class="header__list2">
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc1">Соглашение 1</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc2">Соглашение 2</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc3">Соглашение 3</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc4">Соглашение 4</a></li>
+									<li class="header__item2"><a class="header__link2" href="#" data-loc="Doc5">Соглашение 5</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<nav class="header__menu header__menu-btns">
+						<ul class="header__list">
+							<li class="header__item header__item_btn">
+								<div class="gradient-btn hovered header__item-btn_log">
+									<div class="gradient-btn__render">
+										<a class="gradient-btn__text gradient-btn__text_def" href="./login.html" data-loc-gbb="Login">Войти</a>
+									</div>
+								</div>
+							</li>
+							<li class="header__item header__item_btn">
+								<div class="gradient-btn header__item-btn_reg">
+									<div class="gradient-btn__render">
+										<a class="gradient-btn__text gradient-btn__text_def" href="./register.html" data-loc-gbb="Register">Зарегистрироваться</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__menu-mobile">
+						<div class="header__menu-burger"><span></span></div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="main__inner">
+					<div class="main__masonry-gallery">
+						<div class="main__mas-gal-left">
+							<img src="img/room-details/n888-l.svg">
+						</div>
+						<div class="main__mas-gal-right">
+							<div class="main__mas-gal-right-top"></div>
+							<div class="main__mas-gal-right-bottom"></div>
+						</div>
+					</div>
+					<div class="main__container">
+						<div class="main__info">
+							<div class="main__info-container-top">
+								<div class="main__number-info">
+									<h2 class="main__info-h2" data-loc="NumberInfo">Сведения о номере</h2>
+									<div class="main__number-info-item">
+										<span class="main__number-info-item-icon main__ni3_Comfort"></span>
+										<div class="main__number-info-content">
+											<h4 class="main__number-info-hdr" data-loc="Comfort">Комфорт</h4>
+											<p class="main__number-info-txt" data-loc="NoiseAbsorbingWalls">Шумопоглощающие стены</p>
+										</div>
+									</div>
+									<div class="main__number-info-line"></div>
+									<div class="main__number-info-item">
+										<span class="main__number-info-item-icon main__ni3_Convenience"></span>
+										<div class="main__number-info-content">
+											<h4 class="main__number-info-hdr" data-loc="Convenience">Удобство</h4>
+											<p class="main__number-info-txt" data-loc="WindowInEachBadroom">Окно в каждой из спален</p>
+										</div>
+									</div>
+									<div class="main__number-info-line"></div>
+									<div class="main__number-info-item">
+										<span class="main__number-info-item-icon main__ni3_Cosy"></span>
+										<div class="main__number-info-content">
+											<h4 class="main__number-info-hdr" data-loc="Cosy">Уют</h4>
+											<p class="main__number-info-txt" data-loc="NumberHaveAFireplace">Номер оснащен камином</p>
+										</div>
+									</div>
+								</div>
+								<div class="main__impressions-of-number">
+									<h2 class="main__info-h2" data-loc="ImpressionsOfNumber">Впечатления от номера</h2>
+									<div class="main__ion_contaner">
+										<div class="main__doughnut-chart_rep">
+											<canvas class="doughnut-chart" id="dch-impressions-of-number" height=124 width=124></canvas>
+										</div>
+										<ul class="doughnut-chart-legend" >
+											<li class="doughnut-chart-legend-item" data-loc="Excellent">Великолепно</li>
+											<li class="doughnut-chart-legend-item" data-loc="Good">Хорошо</li>
+											<li class="doughnut-chart-legend-item" data-loc="Satisfactory">Удовлетворительно</li>
+											<li class="doughnut-chart-legend-item" data-loc="Disappointed">Разочарован</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="main__info-reviews">
+								<div class="main__info-reviews-header">
+									<h2 class="main__info-h2" data-loc="UserOfNumberReviews">Отзывы посетителей номера</h2>
+									<div class="main__info-reviews-menu">
+										<p class="main__info-reviews-menu-count" data-loc-ctx="CountReviews">2 отзыва</p>
+									</div>
+								</div>
+								<div class="review">
+									<div class="review__aside">
+										<div class="review__avatar">
+											<img  src="img\room-details\user-photo04.svg">
+										</div>
+										<div class="review__like-btn like-btn">
+											<label class="like-btn__label" for="like-btn-user4">
+												<input class="like-btn-checkbox" type="checkbox" name="" id="like-btn-user4">
+												<div class="like-btn-border">
+													<div class="like-btn__heard"></div>
+													<div class="like-btn__counter-bg"><div class="like-btn__counter">12</div></div>
+												</div>
+											</label>
+										</div>
+									</div>
+									<div class="review__content">
+										<h4 class="review__h4" data-loc="MuradSarraphanoff">Мурад Сарафанов</h4>
+										<div class="review__time-ago-count" data-loc-ctx="CountTimeAgo">5 дней назад</div>
+										<div class="review__body" data-loc-ctx="Text">
+											Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. <br>И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто <br>не жаловался из соседей.
+										</div>										
+									</div>
+								</div>
+								<div class="review">
+									<div class="review__aside">
+										<div class="review__avatar">
+											<img  src="img\room-details\user-photo03.svg">
+										</div>
+										<div class="review__like-btn like-btn">
+											<label class="like-btn__label" for="like-btn-user3">
+												<input class="like-btn-checkbox" type="checkbox" name="" id="like-btn-user3" checked disabled>
+												<div class="like-btn-border">
+													<div class="like-btn__heard"></div>
+													<div class="like-btn__counter-bg"><div class="like-btn__counter">&nbsp; 2</div></div>
+												</div>
+											</label>
+										</div>
+									</div>
+									<div class="review__content">
+										<h4 class="review__h4" data-loc="PatriciaSteklyshkova">Патрисия Стёклышкова</h4>
+										<div class="review__time-ago-count" data-loc-ctx="CountTimeAgo">неделю назад</div>
+										<div class="review__body" data-loc-ctx="Text">
+											Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,<br>каждый день новое блюдо и десерт как комплимент.
+										</div>										
+									</div>
+								</div>
+							</div>
+							<div class="main__info-container-bottom">
+								<div class="main__info-rules">
+									<h2 class="main__info-h2v2" data-loc="Rules">Правила</h2>
+									<ul class="main__info-rules-list">
+										<li class="main__info-rules-item" data-loc="ItIsForbiddenWithPets">Нелься с питомцами</li>
+										<li class="main__info-rules-item" data-loc="ItIsForbiddenPartiesAndActions">Без вечеринок и мероприятий</li>
+										<li class="main__info-rules-item" data-loc="ArriveAfterDepartureBefore">Время прибытия - после 13:00, а выезд до 12:00</li>
+									</ul>
+								</div>
+								<div class="main__info-cancellation">
+									<h2 class="main__info-h2v2" data-loc="Cancellation">Отмена</h2>
+									<p class="main__info-cancellation-content" data-loc="Text10">Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</p>
+								</div>
+							</div>
+						</div>
+						<form class="details-form main__details-form_rep">
+							<div class="dtl-frm__header">
+								<div class="dtl-frm__header-number dtl-frm__header-number_lux-ru" data-loc-ps="Lux">888</div>
+								<div class="dtl-frm__header-price">
+									<span class="dtl-frm__header-sum-of-money">9 990</span><span data-loc="ByDay">в сутки</span>
+								</div>
+							</div>
+							<div class="double-dates-fields-group dtl-frm__double-dates-fields-group_rep">
+								<div class="named-field dtl-frm__named-field">
+									<h3 data-loc="Arrival">Прибытие</h3>
+									<div class="dropdown-field">
+										<input class="text-field df__arrival-text-field" type="text" name="arrival" placeholder="19.08.2019" data-loc-ph="dmy">
+									</div>
+								</div>
+								<div  class="named-field dtl-frm__named-field">
+									<h3 data-loc="Departure">Выезд</h3>
+									<div class="dropdown-field">
+										<input class="text-field df__departure-text-field" type="text" name="departure" placeholder="23.08.2019" data-loc-ph="dmy">
+									</div>
+								</div>
+							</div>
+							<div class="named-field dtl-frm__guests-named-field_rep">
+								<h3 data-loc="Guests">Гости</h3>
+								<div class="dropdown-field">
+									<input class="text-field df__guests-text-field" type="text" name="guests" placeholder="3 гостя" data-loc-ph="HowManyGuests">
+								</div>
+							</div>
+							<div class="bill-string dtl-frm__bill-string-4number">
+							<div class="bill-string dtl-frm__bill-string-4number">	2						</div>
+								<span class="bill-string__pose-name"><span class="sum-signing">9 990</span> x 4 суток</span>
+								<span class="bill-string__pose-sum">39 960</span>
+							</div>
+							<div class="bill-string dtl-frm__bill-string-4base-services">
+								<span class="bill-string__pose-name">Сбор за услуги: скидка <span class="sum-signing">2 179</span></span>
+								<span class="bill-string__pose-sum">0</span>
+							</div>
+							<div class="bill-string dtl-frm__bill-string-4auxiliary-services">
+								<span class="bill-string__pose-name">Сбор за дополнительные услуги</span>
+								<span class="bill-string__pose-sum">300</span>
+							</div>
+							<div class="bill-string dtl-frm__bill-string-result">
+								<span class="bill-string__pose-name">Итого</span>
+								<span class="bill-string__pose-sum">38 081</span>
+							</div>
+							<div class="gradient-btn gradient-btn__arrowed dtl-frm__submit-button_rep">
+								<input class="gradient-btn__btn" type="button" name="grd-btn">
+								<div class="gradient-btn__render">
+									<a class="gradient-btn__text gradient-btn__text_def" href="#" data-loc-gbb="SelectNumber">Подобрать номер</a>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</main>
+			<footer>
+				<div class="footer__inner">
+					<div class="footer__body">
+						<div class="footer__logo">
+							<a href="#">
+								<img src="img/logo-toxin.png" alt="logo">
+							</a>
+							<p data-loc="Text02">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+						</div>
+						<div class="footer__nav footer__nav-nav">
+							<label class="footer__nav-toggle-label" for="footerNavToggleId">
+								<h3 data-loc="Navigation">Навигация</h3>
+							</label>
+							<input class="footer__nav-toggle-chackbox" type="checkbox" id="footerNavToggleId">
+							<ul class="footer__list-nav">
+								<li><a href="#" data-loc="AboutUs">О Нас</a></li>
+								<li><a href="#" data-loc="News"></a>Новости</li>
+								<li><a href="#" data-loc="Support">Служба поддержки</a></li>
+								<li><a href="#" data-loc="Products">Услуги</a></li>
+							</ul>
+						</div>
+						<div class="footer__nav footer__nav-about">
+							<label class="footer__about-toggle-label" for="footerAboutToggleId">
+								<h3 data-loc="AboutUs">О Нас</h3>
+							</label>
+							<input class="footer__about-toggle-chackbox" type="checkbox" id="footerAboutToggleId">
+							<ul class="footer__list-about">
+								<li><a href="#" data-loc="WhoWeAre">О сервисе</a></li>
+								<li><a href="#" data-loc="OurTeam">Наша команда</a></li>
+								<li><a href="#" data-loc="Careers">Вакансии</a></li>
+								<li><a href="#" data-loc="Investors">Инвесторы</a></li>
+							</ul>
+						</div>
+						<div class="footer__nav footer__nav-sup">
+							<label class="footer__sup-toggle-label" for="footerSupToggleId">
+								<h3 data-loc="Support">Служба поддержки</h3>
+							</label>
+							<input class="footer__sup-toggle-chackbox" type="checkbox" id="footerSupToggleId">
+							<ul class="footer__list-sup">
+								<li><a href="#" data-loc="Doc">Соглашения</a></li>
+								<li><a href="#" data-loc="Community">Сообщества</a></li>
+								<li><a href="#" data-loc="GetInTouch">Связь с нами</a></li>
+								<li class="loc-link-eng">
+									<a href="#" >
+										<img class="flag_UK" src="img/flag_eng.PNG" alt="localize in english">
+										English
+									</a>
+								</li>
+								<li class="loc-link-rus loc-link_hidden-lang">
+									<a href="#">
+										<img class="flag_russia" src="img/flag_rus.PNG" alt="localize in russian">
+										Русский
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__subscription">
+							<label class="footer__subscr-toggle-label" for="footerSubscrToggleId">
+								<h3 data-loc="Subscription">Подписка</h3>
+							</label>
+							<input class="footer__subscr-toggle-chackbox" type="checkbox" id="footerSubscrToggleId">
+							<div class="footer__subscr-content">
+								<p data-loc="Text03">Получайте специальные предложения и новости сервиса</p>
+								<div class="subscription-text-field">
+									<input class="text-field subscription-text-field__txtfld" type="text" name="subscription-email" placeholder="Email" data-loc-ph="SubEMail">
+									<input class="subscription-text-field__btn" type="button" onclick="alert('You\'ve subscripted!');">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__sole">
+						<div class="footer__rights">
+							<a href="#" data-loc="Copyright">Copyright &copy; 2018 Toxin отель. Все права зачищены.</a>
+						</div>
+						<div class="footer__socials">
+							<!--ul class="footer__socials-list">
+								<li><a href="#"><img src="img/logo-twitter.png" alt="twitter"></a></li>
+								<li><a href="#"><img src="img/logo-facebook.png" alt="facebook"></a></li>
+								<li><a href="#"><img src="img/logo-instagramm.png" alt="instagramm"></a></li>
+							</ul-->
+							<ul class="footer__socials-list">
+								<li><a class="footer__socials-twitter" href="#"><img src="img/logo-twitter.png" alt="twitter"></a></li>
+								<li><a class="footer__socials-facebook" href="#"><img src="img/logo-facebook.png" alt="facebook"></a></li>
+								<li><a class="footer__socials-instagramm" href="#"><img src="img/logo-instagramm.png" alt="instagramm"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>				
+			</footer>
+		</div>
+	<!--Plugin JavaScript file-->
+	<!--jQuery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!--Off-line jQuery import, if it has not been loaded-->
+	<script>window.jQuery||document.write('<script src="js/plugins/jquery-3.5.0.min.js"><\/script>');</script>
+	<!--script src="js/plugins/jquery-3.5.0.min.js"></script-->
+
+	<!--Ion Range Slider-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+	<!--Off-line Ion Range Slider import-->
+	<script src="js/plugins/ion.rangeSlider.min.js"></script>
+
+	<!--Off-line Slick Slider import-->
+	<script src="js/plugins/slick.min.js"></script>
+	<!--Off-line Air datapicker import-->
+	<script src="js/plugins/datepicker.min.js"></script>
+	<!--off-line chart.js import-->
+	<script type="text/javascript" src="js/plugins/chart.js"></script><!--.min-->
+	<!--Internal scripts-->
+	<script src="js/common.js"></script>
+	<script src="js/modal-forms.js"></script>
+	<script src="js/localize.js"></script>
+	<script src="js/locDicRus.js"></script>
+	<script src="js/locDicEng.js"></script>
+	<script src="js/room-details.js"></script>
+	</body>
+</html>

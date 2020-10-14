@@ -12,7 +12,12 @@
 	display:flex;
 	justify-content:space-between;
 }
+.checkbox-grp__check-box:checked+.main__inner{
+	border:1px solid lime;
+}
+
 .main__aside-search{
+	padding-top:31px;
 }
 .search-form{
 	width:266px;
@@ -20,13 +25,19 @@
 }
 
 .srch-frm__being-dates_rep{
-	margin-top:31px;
 }
 .srch-frm__dimf-arr-dep_rep{
 	position:absolute;
 	left:inherit;
 	top:165px;
 	z-index:3;
+	width:266px;
+}
+.datepicker_arr-dep{
+	width:inherit;
+}
+.datepicker{
+	width:90%;
 }
 .srch-frm__guests_rep{
 	margin-top:15px;
@@ -42,10 +53,10 @@
 	margin-top:11px;	
 }
 .srch-frm__improvements_rep{
-	margin-top:28px;	
+	margin-top:30px;	
 }
 .srch-frm__accessibility_rep{
-	margin-top:28px;	
+	margin-top:35px;	
 }
 .srch-frm__number-improvements_rep{
 	margin-top:20px;
@@ -426,4 +437,91 @@
 	width:100%;
 	height:1px;
 	background-color:#c6c7cf;
+}
+@media(max-width:1140px){
+	.main{
+		height:1911px;
+		/*(3)258*4(=1032)+20*3 = 1092 plusAllRest(263)= 1355
+		  (2)258*6(=1548)+20*5(100) = 1648 plusAllRest(263)= 1911 */
+	}
+	.main__masonry-result{
+		max-width:70%; 
+		/*1140-266-20=
+		(3)270*3+12*2=834 (2)270*2+12=552 (1)270=270*/
+	}
+	.main__searched-rooms-grid{
+		height:1648px;	
+	}
+}
+@media(max-width:1100px){
+	.srch-frm__dimf-arr-dep_rep{
+		top:180px;
+	}
+	.srch-frm__qimf-guests_rep{
+		top:261px;
+	}
+	.srch-frm__qimf-number-improvements_rep{
+		top:802px;
+	}
+	.srch-frm__qimf-number-improvements_rep-rus{
+		top:784px;
+	}
+}
+@media(max-width:990px){
+	.main__masonry-result{
+		max-width:65%; 
+		/*1140-266-20=
+		(3)270*3+12*2=834 (2)270*2+12=552 (1)270=270*/
+	}
+}
+@media(max-width:880px){
+	.main{
+		height:3613px;/*3555-29+87=3613(the change h1 height)*/
+		/*(3)258*4(=1032)+20*3 = 1092 plusAllRest(263)= 1355
+		  (2)258*6(=1548)+20*5(100) = 1648 plusAllRest(263)= 1911
+		  (1)256*12(3072)+20*11(220) = 3292 plusAllRest(263)= 3555 */
+	}
+	.main__masonry-result{
+		width:270px;
+		max-width:none; 
+		/*
+		(3)270*3+12*2=834 (2)270*2+12=552 (1)270=270*/
+	}
+	.main__searched-rooms-grid{
+		height:3292px;
+	}
+}
+@media(max-width:595px){
+	.main{
+		height:4345px;
+		/*3613+732(search-form's height)=4345
+		  (3)258*4(=1032)+20*3 = 1092 plusAllRest(263)= 1355
+		  (2)258*6(=1548)+20*5(100) = 1648 plusAllRest(263)= 1911
+		  (1)256*12(3072)+20*11(220) = 3292(main__searched-rooms-grid) plusAllRest(263)= 3555 */
+	}
+	.main__inner{
+		flex-direction:column;
+		align-items:center;
+		justify-content:flex-start;
+		/*1140-266-20=
+		(3)270*3+12*2=834 (2)270*2+12=552 (1)270=270*/
+	}
+	.main__aside-search{
+		/*flex-basis:1273px;
+		flex-shrink:2;*/
+	}
+}
+@media(max-width:460px){
+	.srch-frm__dimf-arr-dep_rep{
+		top:230px;
+	}
+	.srch-frm__qimf-guests_rep{
+		top:311px;
+	}
+	.srch-frm__qimf-number-improvements_rep{
+		top:852px;
+	}
+	.srch-frm__qimf-number-improvements_rep-rus{
+		top:834px;
+	}
 }

@@ -121,6 +121,7 @@ function englishNumber(number, numberForms, numberOffset){
 		return numberForms[numberOffset+1];		
 	}
 }
+
 function russianNumber(number, numberForms, numberOffset){
 	if(number%10==1){
 		return numberForms[numberOffset];
@@ -162,5 +163,14 @@ function getNumberImprovementsValue(bedrooms,beds,bathrooms){
 		ph+=", "+beds+" "+russianNumber(beds,PlaceholderRussianDictionary["NumberImprovements"],4);
 		//if(babiesInArms==0){return ph}
 		return ph+", "+bathrooms+" "+russianNumber(bathrooms,PlaceholderRussianDictionary["NumberImprovements"],7)
+	}
+}
+
+function getJSPhrase(Phrase){
+	if(curLoc.classList.contains("loc-link-eng")){
+		return JSPhraseEnglishDictionary[Phrase];
+	}
+	if(curLoc.classList.contains("loc-link-rus")){
+		return JSPhraseRussianDictionary[Phrase];
 	}
 }

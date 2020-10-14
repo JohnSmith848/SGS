@@ -61,6 +61,30 @@
 .icon-favorite_outline:before {
   content: "\e90b";
 }
+.icon-error_outline:before {
+  content: "\e90c";
+}
+.icon-info_outline:before {
+  content: "\e90d";
+}
+
+.icon-star-empty:before {
+  content: "\e9d7";
+}
+.icon-star-full:before {
+  content: "\e9d9";
+}
+
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+
 .icon-eur:before {
   content: "\f153";
 }
@@ -114,19 +138,4 @@
 }
 .icon-btc:before {
   content: "\f15a";
-}
-.icon-star-empty:before {
-  content: "\e9d7";
-}
-.icon-star-full:before {
-  content: "\e9d9";
-}
-.icon-facebook2:before {
-  content: "\ea91";
-}
-.icon-instagram:before {
-  content: "\ea92";
-}
-.icon-twitter:before {
-  content: "\ea96";
 }
